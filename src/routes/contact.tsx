@@ -45,7 +45,7 @@ function Page() {
 
       <ContactSection id="contact-details" />
 
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
         <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
           Prefer to send an enquiry?
         </h2>

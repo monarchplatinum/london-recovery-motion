@@ -63,13 +63,13 @@ export function HeroScene() {
     <div
       ref={rootRef}
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 overflow-hidden [--px:0] [--py:0] [--sy:0]"
+      className="pointer-events-none absolute inset-0 hidden overflow-hidden [--px:0] [--py:0] [--sy:0] sm:block"
     >
       {/* Depth layer 1 — London skyline silhouette (slowest) */}
       <svg
         viewBox="0 0 1200 420"
         preserveAspectRatio="xMidYMax slice"
-        className="absolute inset-x-0 bottom-[26%] h-[46%] w-full opacity-40"
+        className="absolute inset-x-0 bottom-[24%] h-[38%] w-full opacity-40 sm:bottom-[26%] sm:h-[46%]"
         style={{ transform: "translate3d(calc(var(--px) * -14px), calc(var(--sy) * -18px), 0)" }}
       >
         <g fill="oklch(0.28 0.01 260)">
@@ -100,7 +100,7 @@ export function HeroScene() {
       <svg
         viewBox="0 0 1200 300"
         preserveAspectRatio="xMidYMax slice"
-        className="absolute inset-x-0 bottom-[22%] h-[34%] w-full opacity-70"
+        className="absolute inset-x-0 bottom-[20%] h-[28%] w-full opacity-70 sm:bottom-[22%] sm:h-[34%]"
         style={{ transform: "translate3d(calc(var(--px) * -30px), calc(var(--sy) * -34px), 0)" }}
       >
         <g stroke="oklch(0.34 0.01 260)" strokeWidth="5" fill="none">
@@ -114,7 +114,7 @@ export function HeroScene() {
       <svg
         viewBox="0 0 1200 260"
         preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-0 h-[30%] w-full"
+        className="absolute inset-x-0 bottom-0 h-[24%] w-full sm:h-[30%]"
         style={{ transform: "translate3d(calc(var(--px) * -46px), 0, 0) scale(1.12)" }}
       >
         <rect width="1200" height="260" fill="oklch(0.19 0.005 260)" />

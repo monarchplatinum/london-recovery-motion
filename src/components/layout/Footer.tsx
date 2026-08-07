@@ -9,8 +9,8 @@ export function Footer() {
   const { address } = siteConfig;
 
   return (
-    <footer className="hairline-top mt-24 bg-surface/40">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.3fr_1fr_1fr]">
+    <footer className="hairline-top mt-16 bg-surface/40 pb-[calc(5.5rem+env(safe-area-inset-bottom))] sm:mt-24 md:pb-0">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 sm:py-14 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <Logo />
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">

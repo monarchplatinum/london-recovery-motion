@@ -65,16 +65,16 @@ export function Header() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="border-t border-border bg-background lg:hidden"
+          className="max-h-[70svh] overflow-y-auto overscroll-contain border-t border-border bg-background lg:hidden"
         >
-          <ul className="mx-auto max-w-7xl px-4 py-2 sm:px-6">
+          <ul className="mx-auto max-w-7xl px-4 pb-3 pt-2 sm:px-6">
             {nav.map((item) => (
               <li key={item.to}>
                 <Link
                   to={item.to}
                   onClick={() => setOpen(false)}
                   activeProps={{ className: "text-primary" }}
-                  className="flex min-h-12 items-center border-b border-border/60 text-[0.95rem] text-foreground/90"
+                  className="flex min-h-[3.25rem] items-center border-b border-border/60 text-[0.95rem] text-foreground/90"
                 >
                   {item.label}
                 </Link>

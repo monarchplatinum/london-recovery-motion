@@ -34,9 +34,9 @@ export function WhyChoose() {
 
   return (
     <section className="border-y border-border bg-surface/30">
-      <div ref={ref} className="reveal mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+      <div ref={ref} className="reveal mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">Why MPG Recovery</p>
-        <h2 className="mt-3 font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
+        <h2 className="mt-3 text-balance font-display text-[1.8rem] font-extrabold sm:text-4xl md:text-5xl">
           Need a Recovery Truck?
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -62,7 +62,7 @@ export function TransportSection() {
   const ref = useReveal<HTMLDivElement>();
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+    <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
       <div ref={ref} className="reveal grid items-center gap-10 lg:grid-cols-2">
         <div className="overflow-hidden rounded-2xl border border-border">
           <img
@@ -77,7 +77,7 @@ export function TransportSection() {
         </div>
         <div>
           <p className="text-eyebrow">Vehicle transport</p>
-          <h2 className="mt-3 text-balance font-display text-3xl font-extrabold leading-[1.02] sm:text-4xl">
+          <h2 className="mt-3 text-balance font-display text-[1.8rem] font-extrabold leading-[1.05] sm:text-4xl sm:leading-[1.02]">
             Vehicle Transport From A to B
           </h2>
           <p className="mt-4 text-muted-foreground">
@@ -145,9 +145,9 @@ export function Scenarios() {
         className="absolute inset-0 size-full object-cover opacity-25"
       />
       <div className="absolute inset-0 bg-background/70" aria-hidden="true" />
-      <div ref={ref} className="reveal relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+      <div ref={ref} className="reveal relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">Common situations</p>
-        <h2 className="mt-3 font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
+        <h2 className="mt-3 text-balance font-display text-[1.8rem] font-extrabold sm:text-4xl md:text-5xl">
           Recovery Services in East London
         </h2>
         <p className="mt-4 max-w-2xl text-muted-foreground">

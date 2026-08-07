@@ -143,7 +143,7 @@ function RootComponent() {
         Skip to main content
       </a>
       <Header />
-      <main id="main" className="pb-24 md:pb-0">
+      <main id="main">
         {/* Required: nested routes render here. */}
         <Outlet />
       </main>

@@ -41,11 +41,11 @@ export function Coverage() {
   const ref = useReveal<HTMLDivElement>();
 
   return (
-    <section id="coverage" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
-      <div ref={ref} className="reveal grid gap-12 lg:grid-cols-[1fr_1.05fr] lg:items-center">
+    <section id="coverage" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
+      <div ref={ref} className="reveal grid gap-9 lg:gap-12 lg:grid-cols-[1fr_1.05fr] lg:items-center">
         <div>
           <p className="text-eyebrow">Coverage</p>
-          <h2 className="mt-3 text-balance font-display text-3xl font-extrabold leading-[1.02] sm:text-4xl md:text-5xl">
+          <h2 className="mt-3 text-balance font-display text-[1.8rem] font-extrabold leading-[1.05] sm:text-4xl sm:leading-[1.02] md:text-5xl">
             Vehicle Recovery Across London
           </h2>
           <p className="mt-4 max-w-xl text-muted-foreground">
