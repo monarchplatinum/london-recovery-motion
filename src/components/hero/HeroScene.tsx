@@ -122,7 +122,7 @@ export function HeroScene() {
       <svg
         viewBox="0 0 720 260"
         preserveAspectRatio="xMidYMax meet"
-        className="absolute bottom-[9%] left-[64%] h-[34%] w-[min(58%,660px)] -translate-x-1/2 opacity-90"
+        className="absolute bottom-[8%] left-[74%] h-[30%] w-[min(52%,560px)] -translate-x-1/2 opacity-80"
         style={{
           transform:
             "translate3d(calc(-50% + var(--px) * 34px + var(--sy) * 70px), calc(var(--py) * 10px), 0)",
