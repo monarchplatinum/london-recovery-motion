@@ -1,0 +1,15 @@
+{
+  "name": "MPG Recovery — Vehicle Recovery & Transport London",
+  "short_name": "MPG Recovery",
+  "description": "London vehicle recovery, towing and vehicle transport. WhatsApp or call 07884 889128.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#141518",
+  "theme_color": "#141518",
+  "lang": "en-GB",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -11,7 +11,7 @@ const description =
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
-    meta: seoMeta({ title, description, path, noindex: true }),
+    meta: seoMeta({ title, description, path }),
     links: canonical(path),
     scripts: [
       {
