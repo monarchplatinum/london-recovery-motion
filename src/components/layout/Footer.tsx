@@ -38,7 +38,10 @@ export function Footer() {
               WhatsApp {siteConfig.whatsappDisplay}
             </a>
           </div>
+
+          <SocialLinks className="mt-5" />
         </div>
+
 
         <nav aria-label="Services">
           <h2 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
