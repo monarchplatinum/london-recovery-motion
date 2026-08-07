@@ -1,7 +1,7 @@
+import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Prose } from "@/components/layout/PageParts";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
-import { absoluteUrl } from "@/config/site";
 
 const path = "/cookie-policy";
 const title = "Cookie Policy | MPG Recovery";
@@ -10,15 +10,8 @@ const description =
 
 export const Route = createFileRoute("/cookie-policy")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: path },
-    ],
-    links: [{ rel: "canonical", href: absoluteUrl(path) || path }],
+    meta: seoMeta({ title, description, path }),
+    links: canonical(path),
     scripts: [
       {
         type: "application/ld+json",

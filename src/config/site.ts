@@ -59,8 +59,8 @@ export const siteConfig = {
   },
 
   // --- Site --------------------------------------------------------------
-  /** TODO: set the final production domain, e.g. "https://mpgrecovery.co.uk" */
-  url: "",
+  /** Production domain. Update if a custom domain is connected. */
+  url: "https://london-recovery-motion.lovable.app",
 
   areaServed: "London",
 } as const;

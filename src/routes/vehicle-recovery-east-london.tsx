@@ -1,8 +1,8 @@
+import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { LocationPage } from "@/components/sections/LocationPage";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
-import { absoluteUrl } from "@/config/site";
 
 const path = "/vehicle-recovery-east-london";
 const title = 'Vehicle Recovery East London | Car Recovery E1 & Docklands | MPG Recovery';
@@ -10,15 +10,8 @@ const description = 'Vehicle recovery in East London from our E1 base. Tower Ham
 
 export const Route = createFileRoute("/vehicle-recovery-east-london")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: path },
-    ],
-    links: [{ rel: "canonical", href: absoluteUrl(path) || path }],
+    meta: seoMeta({ title, description, path }),
+    links: canonical(path),
     scripts: [
       {
         type: "application/ld+json",

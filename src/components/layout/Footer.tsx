@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Logo } from "@/components/brand/Logo";
+import { SocialLinks } from "@/components/layout/SocialLinks";
 import { siteConfig, whatsappLink, waMessages, serviceAreas } from "@/config/site";
 import { trackConversion } from "@/lib/analytics";
 
@@ -38,7 +39,10 @@ export function Footer() {
               WhatsApp {siteConfig.whatsappDisplay}
             </a>
           </div>
+
+          <SocialLinks className="mt-5" />
         </div>
+
 
         <nav aria-label="Services">
           <h2 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">

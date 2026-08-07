@@ -1,3 +1,4 @@
+import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-truck.jpg";
@@ -11,25 +12,18 @@ import { WhyChoose, TransportSection, Scenarios } from "@/components/sections/Ho
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FaqList, faqSchema } from "@/components/sections/Faq";
 import { homeFaqs } from "@/content/faqs";
-import { waMessages, absoluteUrl } from "@/config/site";
+import { waMessages } from "@/config/site";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 
+const path = "/";
 const title = "Vehicle Recovery London | Towing & Vehicle Transport | MPG Recovery";
 const description =
   "London vehicle recovery, towing and vehicle transport from MPG Recovery. WhatsApp or call 07884 889128 for vehicle recovery and transport enquiries.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: absoluteUrl("/") || "/" }],
+    meta: seoMeta({ title, description, path }),
+    links: canonical(path),
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(localBusinessSchema()) },
       { type: "application/ld+json", children: JSON.stringify(websiteSchema()) },
