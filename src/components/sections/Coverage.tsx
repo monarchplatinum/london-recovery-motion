@@ -123,6 +123,30 @@ export function Coverage() {
               <line x1="70" y1="70" x2="330" y2="330" />
               <line x1="330" y1="70" x2="70" y2="330" />
             </g>
+            {/* all area markers */}
+            {serviceAreas.map((a) => {
+              const p = areaPos[a.slug as AreaKey];
+              const isActive = a.slug === active;
+              const cx = (p.x / 100) * 400;
+              const cy = (p.y / 100) * 400;
+              return (
+                <g key={a.slug} className="transition-opacity duration-500" opacity={isActive ? 1 : 0.55}>
+                  <circle cx={cx} cy={cy} r={isActive ? 5.5 : 4} fill={isActive ? "var(--color-primary)" : "oklch(0.75 0.01 260)"} />
+                  <text
+                    x={cx}
+                    y={cy - 14}
+                    textAnchor="middle"
+                    fill={isActive ? "var(--color-primary)" : "oklch(0.78 0.01 260)"}
+                    fontSize="12"
+                    fontWeight="700"
+                    letterSpacing="1.2"
+                    fontFamily="var(--font-display)"
+                  >
+                    {a.label.replace(" London", "").toUpperCase()}
+                  </text>
+                </g>
+              );
+            })}
             {/* active pin */}
             <circle
               cx={(areaPos[active].x / 100) * 400}
@@ -131,13 +155,7 @@ export function Coverage() {
               fill="oklch(0.78 0.17 64 / 0.16)"
               className="transition-all duration-500"
             />
-            <circle
-              cx={(areaPos[active].x / 100) * 400}
-              cy={(areaPos[active].y / 100) * 400}
-              r="8"
-              fill="var(--color-primary)"
-              className="transition-all duration-500"
-            />
+
             {/* E1 base marker */}
             <g>
               <circle cx="288" cy="196" r="4" fill="oklch(0.98 0 0)" />
