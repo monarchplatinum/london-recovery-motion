@@ -10,33 +10,250 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AccidentRecoveryLondonRouteImport } from './routes/accident-recovery-london'
+import { Route as AreasWeCoverRouteImport } from './routes/areas-we-cover'
+import { Route as BreakdownRecoveryLondonRouteImport } from './routes/breakdown-recovery-london'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as VehicleRecoveryCentralLondonRouteImport } from './routes/vehicle-recovery-central-london'
+import { Route as VehicleRecoveryEastLondonRouteImport } from './routes/vehicle-recovery-east-london'
+import { Route as VehicleRecoveryLondonRouteImport } from './routes/vehicle-recovery-london'
+import { Route as VehicleRecoveryNorthLondonRouteImport } from './routes/vehicle-recovery-north-london'
+import { Route as VehicleRecoverySouthLondonRouteImport } from './routes/vehicle-recovery-south-london'
+import { Route as VehicleRecoveryWestLondonRouteImport } from './routes/vehicle-recovery-west-london'
+import { Route as VehicleTransportLondonRouteImport } from './routes/vehicle-transport-london'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccidentRecoveryLondonRoute = AccidentRecoveryLondonRouteImport.update({
+  id: '/accident-recovery-london',
+  path: '/accident-recovery-london',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasWeCoverRoute = AreasWeCoverRouteImport.update({
+  id: '/areas-we-cover',
+  path: '/areas-we-cover',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BreakdownRecoveryLondonRoute = BreakdownRecoveryLondonRouteImport.update({
+  id: '/breakdown-recovery-london',
+  path: '/breakdown-recovery-london',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VehicleRecoveryCentralLondonRoute =
+  VehicleRecoveryCentralLondonRouteImport.update({
+    id: '/vehicle-recovery-central-london',
+    path: '/vehicle-recovery-central-london',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VehicleRecoveryEastLondonRoute =
+  VehicleRecoveryEastLondonRouteImport.update({
+    id: '/vehicle-recovery-east-london',
+    path: '/vehicle-recovery-east-london',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VehicleRecoveryLondonRoute = VehicleRecoveryLondonRouteImport.update({
+  id: '/vehicle-recovery-london',
+  path: '/vehicle-recovery-london',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VehicleRecoveryNorthLondonRoute =
+  VehicleRecoveryNorthLondonRouteImport.update({
+    id: '/vehicle-recovery-north-london',
+    path: '/vehicle-recovery-north-london',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VehicleRecoverySouthLondonRoute =
+  VehicleRecoverySouthLondonRouteImport.update({
+    id: '/vehicle-recovery-south-london',
+    path: '/vehicle-recovery-south-london',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VehicleRecoveryWestLondonRoute =
+  VehicleRecoveryWestLondonRouteImport.update({
+    id: '/vehicle-recovery-west-london',
+    path: '/vehicle-recovery-west-london',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VehicleTransportLondonRoute = VehicleTransportLondonRouteImport.update({
+  id: '/vehicle-transport-london',
+  path: '/vehicle-transport-london',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/accident-recovery-london': typeof AccidentRecoveryLondonRoute
+  '/areas-we-cover': typeof AreasWeCoverRoute
+  '/breakdown-recovery-london': typeof BreakdownRecoveryLondonRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
+  '/vehicle-recovery-central-london': typeof VehicleRecoveryCentralLondonRoute
+  '/vehicle-recovery-east-london': typeof VehicleRecoveryEastLondonRoute
+  '/vehicle-recovery-london': typeof VehicleRecoveryLondonRoute
+  '/vehicle-recovery-north-london': typeof VehicleRecoveryNorthLondonRoute
+  '/vehicle-recovery-south-london': typeof VehicleRecoverySouthLondonRoute
+  '/vehicle-recovery-west-london': typeof VehicleRecoveryWestLondonRoute
+  '/vehicle-transport-london': typeof VehicleTransportLondonRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/accident-recovery-london': typeof AccidentRecoveryLondonRoute
+  '/areas-we-cover': typeof AreasWeCoverRoute
+  '/breakdown-recovery-london': typeof BreakdownRecoveryLondonRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
+  '/vehicle-recovery-central-london': typeof VehicleRecoveryCentralLondonRoute
+  '/vehicle-recovery-east-london': typeof VehicleRecoveryEastLondonRoute
+  '/vehicle-recovery-london': typeof VehicleRecoveryLondonRoute
+  '/vehicle-recovery-north-london': typeof VehicleRecoveryNorthLondonRoute
+  '/vehicle-recovery-south-london': typeof VehicleRecoverySouthLondonRoute
+  '/vehicle-recovery-west-london': typeof VehicleRecoveryWestLondonRoute
+  '/vehicle-transport-london': typeof VehicleTransportLondonRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/accident-recovery-london': typeof AccidentRecoveryLondonRoute
+  '/areas-we-cover': typeof AreasWeCoverRoute
+  '/breakdown-recovery-london': typeof BreakdownRecoveryLondonRoute
+  '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
+  '/vehicle-recovery-central-london': typeof VehicleRecoveryCentralLondonRoute
+  '/vehicle-recovery-east-london': typeof VehicleRecoveryEastLondonRoute
+  '/vehicle-recovery-london': typeof VehicleRecoveryLondonRoute
+  '/vehicle-recovery-north-london': typeof VehicleRecoveryNorthLondonRoute
+  '/vehicle-recovery-south-london': typeof VehicleRecoverySouthLondonRoute
+  '/vehicle-recovery-west-london': typeof VehicleRecoveryWestLondonRoute
+  '/vehicle-transport-london': typeof VehicleTransportLondonRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/accident-recovery-london'
+    | '/areas-we-cover'
+    | '/breakdown-recovery-london'
+    | '/contact'
+    | '/cookie-policy'
+    | '/privacy-policy'
+    | '/sitemap.xml'
+    | '/terms'
+    | '/vehicle-recovery-central-london'
+    | '/vehicle-recovery-east-london'
+    | '/vehicle-recovery-london'
+    | '/vehicle-recovery-north-london'
+    | '/vehicle-recovery-south-london'
+    | '/vehicle-recovery-west-london'
+    | '/vehicle-transport-london'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/accident-recovery-london'
+    | '/areas-we-cover'
+    | '/breakdown-recovery-london'
+    | '/contact'
+    | '/cookie-policy'
+    | '/privacy-policy'
+    | '/sitemap.xml'
+    | '/terms'
+    | '/vehicle-recovery-central-london'
+    | '/vehicle-recovery-east-london'
+    | '/vehicle-recovery-london'
+    | '/vehicle-recovery-north-london'
+    | '/vehicle-recovery-south-london'
+    | '/vehicle-recovery-west-london'
+    | '/vehicle-transport-london'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/accident-recovery-london'
+    | '/areas-we-cover'
+    | '/breakdown-recovery-london'
+    | '/contact'
+    | '/cookie-policy'
+    | '/privacy-policy'
+    | '/sitemap.xml'
+    | '/terms'
+    | '/vehicle-recovery-central-london'
+    | '/vehicle-recovery-east-london'
+    | '/vehicle-recovery-london'
+    | '/vehicle-recovery-north-london'
+    | '/vehicle-recovery-south-london'
+    | '/vehicle-recovery-west-london'
+    | '/vehicle-transport-london'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AccidentRecoveryLondonRoute: typeof AccidentRecoveryLondonRoute
+  AreasWeCoverRoute: typeof AreasWeCoverRoute
+  BreakdownRecoveryLondonRoute: typeof BreakdownRecoveryLondonRoute
+  ContactRoute: typeof ContactRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsRoute: typeof TermsRoute
+  VehicleRecoveryCentralLondonRoute: typeof VehicleRecoveryCentralLondonRoute
+  VehicleRecoveryEastLondonRoute: typeof VehicleRecoveryEastLondonRoute
+  VehicleRecoveryLondonRoute: typeof VehicleRecoveryLondonRoute
+  VehicleRecoveryNorthLondonRoute: typeof VehicleRecoveryNorthLondonRoute
+  VehicleRecoverySouthLondonRoute: typeof VehicleRecoverySouthLondonRoute
+  VehicleRecoveryWestLondonRoute: typeof VehicleRecoveryWestLondonRoute
+  VehicleTransportLondonRoute: typeof VehicleTransportLondonRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +265,140 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accident-recovery-london': {
+      id: '/accident-recovery-london'
+      path: '/accident-recovery-london'
+      fullPath: '/accident-recovery-london'
+      preLoaderRoute: typeof AccidentRecoveryLondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas-we-cover': {
+      id: '/areas-we-cover'
+      path: '/areas-we-cover'
+      fullPath: '/areas-we-cover'
+      preLoaderRoute: typeof AreasWeCoverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/breakdown-recovery-london': {
+      id: '/breakdown-recovery-london'
+      path: '/breakdown-recovery-london'
+      fullPath: '/breakdown-recovery-london'
+      preLoaderRoute: typeof BreakdownRecoveryLondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vehicle-recovery-central-london': {
+      id: '/vehicle-recovery-central-london'
+      path: '/vehicle-recovery-central-london'
+      fullPath: '/vehicle-recovery-central-london'
+      preLoaderRoute: typeof VehicleRecoveryCentralLondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vehicle-recovery-east-london': {
+      id: '/vehicle-recovery-east-london'
+      path: '/vehicle-recovery-east-london'
+      fullPath: '/vehicle-recovery-east-london'
+      preLoaderRoute: typeof VehicleRecoveryEastLondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vehicle-recovery-london': {
+      id: '/vehicle-recovery-london'
+      path: '/vehicle-recovery-london'
+      fullPath: '/vehicle-recovery-london'
+      preLoaderRoute: typeof VehicleRecoveryLondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vehicle-recovery-north-london': {
+      id: '/vehicle-recovery-north-london'
+      path: '/vehicle-recovery-north-london'
+      fullPath: '/vehicle-recovery-north-london'
+      preLoaderRoute: typeof VehicleRecoveryNorthLondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vehicle-recovery-south-london': {
+      id: '/vehicle-recovery-south-london'
+      path: '/vehicle-recovery-south-london'
+      fullPath: '/vehicle-recovery-south-london'
+      preLoaderRoute: typeof VehicleRecoverySouthLondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vehicle-recovery-west-london': {
+      id: '/vehicle-recovery-west-london'
+      path: '/vehicle-recovery-west-london'
+      fullPath: '/vehicle-recovery-west-london'
+      preLoaderRoute: typeof VehicleRecoveryWestLondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vehicle-transport-london': {
+      id: '/vehicle-transport-london'
+      path: '/vehicle-transport-london'
+      fullPath: '/vehicle-transport-london'
+      preLoaderRoute: typeof VehicleTransportLondonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AccidentRecoveryLondonRoute: AccidentRecoveryLondonRoute,
+  AreasWeCoverRoute: AreasWeCoverRoute,
+  BreakdownRecoveryLondonRoute: BreakdownRecoveryLondonRoute,
+  ContactRoute: ContactRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsRoute: TermsRoute,
+  VehicleRecoveryCentralLondonRoute: VehicleRecoveryCentralLondonRoute,
+  VehicleRecoveryEastLondonRoute: VehicleRecoveryEastLondonRoute,
+  VehicleRecoveryLondonRoute: VehicleRecoveryLondonRoute,
+  VehicleRecoveryNorthLondonRoute: VehicleRecoveryNorthLondonRoute,
+  VehicleRecoverySouthLondonRoute: VehicleRecoverySouthLondonRoute,
+  VehicleRecoveryWestLondonRoute: VehicleRecoveryWestLondonRoute,
+  VehicleTransportLondonRoute: VehicleTransportLondonRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
