@@ -1,3 +1,4 @@
+import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/layout/PageParts";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -44,15 +45,8 @@ const areas = [
 
 export const Route = createFileRoute("/areas-we-cover")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: path },
-    ],
-    links: [{ rel: "canonical", href: absoluteUrl(path) || path }],
+    meta: seoMeta({ title, description, path }),
+    links: canonical(path),
     scripts: [
       {
         type: "application/ld+json",

@@ -1,10 +1,10 @@
+import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/layout/PageParts";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { EnquiryForm } from "@/components/contact/EnquiryForm";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { localBusinessSchema } from "@/lib/schema";
-import { absoluteUrl } from "@/config/site";
 
 const path = "/contact";
 const title = "Contact MPG Recovery | WhatsApp or Call 07884 889128 | London";
@@ -13,15 +13,8 @@ const description =
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: path },
-    ],
-    links: [{ rel: "canonical", href: absoluteUrl(path) || path }],
+    meta: seoMeta({ title, description, path }),
+    links: canonical(path),
     scripts: [
       {
         type: "application/ld+json",

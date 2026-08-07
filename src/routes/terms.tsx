@@ -1,7 +1,8 @@
+import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Prose } from "@/components/layout/PageParts";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
-import { siteConfig, absoluteUrl } from "@/config/site";
+import { siteConfig } from "@/config/site";
 
 const path = "/terms";
 const title = "Terms of Use | MPG Recovery";
@@ -10,15 +11,8 @@ const description =
 
 export const Route = createFileRoute("/terms")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: path },
-    ],
-    links: [{ rel: "canonical", href: absoluteUrl(path) || path }],
+    meta: seoMeta({ title, description, path, noindex: true }),
+    links: canonical(path),
     scripts: [
       {
         type: "application/ld+json",

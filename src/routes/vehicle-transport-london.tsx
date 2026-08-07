@@ -1,3 +1,4 @@
+import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose } from "@/components/layout/PageParts";
 import { ContextualCta } from "@/components/cta/Cta";
@@ -6,7 +7,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { TransportRoute } from "@/components/sections/TransportRoute";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
-import { waMessages, absoluteUrl } from "@/config/site";
+import { waMessages } from "@/config/site";
 
 const path = "/vehicle-transport-london";
 const title = "Vehicle Transport London | Car Transport & Delivery | MPG Recovery";
@@ -30,15 +31,8 @@ const faqs: FaqItem[] = [
 
 export const Route = createFileRoute("/vehicle-transport-london")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: path },
-    ],
-    links: [{ rel: "canonical", href: absoluteUrl(path) || path }],
+    meta: seoMeta({ title, description, path, image: OG_IMAGES.transport }),
+    links: canonical(path),
     scripts: [
       {
         type: "application/ld+json",
