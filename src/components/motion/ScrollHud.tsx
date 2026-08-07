@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { usePrefersReducedMotion } from "@/hooks/use-motion";
 
 /**
@@ -11,7 +11,6 @@ import { usePrefersReducedMotion } from "@/hooks/use-motion";
 export function ScrollHud() {
   const railRef = useRef<HTMLDivElement>(null);
   const reduced = usePrefersReducedMotion();
-  const [pct, setPct] = useState(0);
 
   useEffect(() => {
     if (reduced) return;
@@ -24,7 +23,6 @@ export function ScrollHud() {
       const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
       root.style.setProperty("--scroll-progress", p.toFixed(4));
       railRef.current?.style.setProperty("--p", p.toFixed(4));
-      setPct(Math.round(p * 100));
     };
 
     const onScroll = () => {
@@ -81,10 +79,6 @@ export function ScrollHud() {
           </svg>
         </div>
 
-        {/* distance readout */}
-        <div className="absolute right-3 top-2 font-display text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground/70 tabular-nums">
-          Route {pct}%
-        </div>
       </div>
     </div>
   );
