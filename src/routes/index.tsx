@@ -57,8 +57,14 @@ function Home() {
           aria-hidden="true"
         />
         <HeroScene />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-linear-to-t from-background via-background/80 to-transparent"
+          aria-hidden="true"
+        />
 
-        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-9 sm:px-6 sm:pb-40 sm:pt-24">
+        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-9 sm:px-6 sm:pb-44 sm:pt-24">
+
+
           <div className="max-w-2xl">
             <p className="text-eyebrow">London Vehicle Recovery &amp; Transport</p>
             <h1 className="mt-3 text-balance font-display text-[2.25rem] font-extrabold leading-[0.95] sm:text-6xl md:text-7xl">
@@ -118,15 +124,16 @@ function Home() {
       <TransportSection />
       <Scenarios />
 
-      <section id="faq" className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-24">
+      <section id="faq" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">FAQ</p>
         <h2 className="mt-3 text-balance font-display text-[1.8rem] font-extrabold sm:text-4xl md:text-5xl">
           Questions before you message
         </h2>
-        <div className="mt-8">
+        <div className="mt-8 max-w-3xl">
           <FaqList items={homeFaqs} />
         </div>
-        <p className="mt-8 text-sm text-muted-foreground">
+        <p className="mt-8 max-w-3xl text-sm text-muted-foreground">
+
           Still unsure?{" "}
           <Link to="/contact" className="text-primary hover:underline">
             Contact MPG Recovery

@@ -65,36 +65,12 @@ export function HeroScene() {
       aria-hidden="true"
       className="pointer-events-none absolute inset-0 hidden overflow-hidden [--px:0] [--py:0] [--sy:0] sm:block"
     >
-      {/* Depth layer 1 — London skyline silhouette (slowest) */}
-      <svg
-        viewBox="0 0 1200 420"
-        preserveAspectRatio="xMidYMax slice"
-        className="absolute inset-x-0 bottom-[24%] h-[38%] w-full opacity-40 sm:bottom-[26%] sm:h-[46%]"
+      {/* Depth layer 1 — distant skyline glow (the photograph carries the real skyline) */}
+      <div
+        className="absolute inset-x-0 bottom-[22%] h-[30%] bg-[radial-gradient(60%_100%_at_70%_100%,color-mix(in_oklab,var(--color-primary)_12%,transparent),transparent_70%)]"
         style={{ transform: "translate3d(calc(var(--px) * -14px), calc(var(--sy) * -18px), 0)" }}
-      >
-        <g fill="oklch(0.28 0.01 260)">
-          <rect x="20" y="250" width="70" height="170" />
-          <rect x="100" y="300" width="46" height="120" />
-          <path d="M170 420V210c0-40 40-58 40-58s40 18 40 58v210Z" />
-          <rect x="270" y="270" width="90" height="150" />
-          <rect x="372" y="180" width="58" height="240" />
-          <path d="M452 420V150l40-34 40 34v270Z" />
-          <rect x="548" y="230" width="120" height="190" />
-          <path d="M690 420V120l34-52 34 52v300Z" />
-          <rect x="780" y="255" width="74" height="165" />
-          <rect x="866" y="205" width="52" height="215" />
-          <path d="M934 420V190l46-30 46 30v230Z" />
-          <rect x="1044" y="285" width="66" height="135" />
-          <rect x="1122" y="240" width="58" height="180" />
-        </g>
-        <g fill="oklch(0.78 0.17 64)" opacity="0.55">
-          <rect x="36" y="272" width="6" height="8" /><rect x="56" y="296" width="6" height="8" />
-          <rect x="288" y="292" width="6" height="8" /><rect x="316" y="330" width="6" height="8" />
-          <rect x="574" y="252" width="6" height="8" /><rect x="612" y="300" width="6" height="8" />
-          <rect x="800" y="278" width="6" height="8" /><rect x="884" y="232" width="6" height="8" />
-          <rect x="1060" y="308" width="6" height="8" /><rect x="1140" y="266" width="6" height="8" />
-        </g>
-      </svg>
+      />
+
 
       {/* Depth layer 2 — street furniture */}
       <svg
@@ -114,8 +90,9 @@ export function HeroScene() {
       <svg
         viewBox="0 0 1200 260"
         preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-0 h-[24%] w-full sm:h-[30%]"
+        className="absolute inset-x-0 bottom-0 h-[24%] w-full opacity-80 sm:h-[26%]"
         style={{ transform: "translate3d(calc(var(--px) * -46px), 0, 0) scale(1.12)" }}
+
       >
         <rect width="1200" height="260" fill="oklch(0.19 0.005 260)" />
         <line x1="0" y1="18" x2="1200" y2="18" stroke="oklch(1 0 0 / 0.1)" strokeWidth="2" />
@@ -145,12 +122,13 @@ export function HeroScene() {
       <svg
         viewBox="0 0 720 260"
         preserveAspectRatio="xMidYMax meet"
-        className="absolute bottom-[7%] left-1/2 h-[42%] w-[min(96%,940px)] -translate-x-1/2"
+        className="absolute bottom-[8%] left-[74%] h-[30%] w-[min(52%,560px)] -translate-x-1/2 opacity-80"
         style={{
           transform:
-            "translate3d(calc(-50% + var(--px) * 44px + var(--sy) * 90px), calc(var(--py) * 10px), 0)",
+            "translate3d(calc(-50% + var(--px) * 34px + var(--sy) * 70px), calc(var(--py) * 10px), 0)",
         }}
       >
+
         {/* headlight beam */}
         <defs>
           <linearGradient id="beam" x1="1" y1="0" x2="0" y2="0">

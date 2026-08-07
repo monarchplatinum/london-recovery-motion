@@ -106,10 +106,14 @@ export function useRevealObserver() {
         .forEach((el) => io.observe(el));
     };
 
-    observeAll();
-
+    // Start after hydration settles so the observer never writes
+    // `data-revealed` onto nodes React is still matching against SSR markup.
     const mo = new MutationObserver(observeAll);
-    mo.observe(document.body, { childList: true, subtree: true });
+    const start = window.setTimeout(() => {
+      observeAll();
+      mo.observe(document.body, { childList: true, subtree: true });
+    }, 300);
+
 
     // Safety net: anything still hidden after 3s is shown regardless.
     const timer = window.setTimeout(() => {
@@ -126,8 +130,10 @@ export function useRevealObserver() {
     return () => {
       io.disconnect();
       mo.disconnect();
+      window.clearTimeout(start);
       window.clearTimeout(timer);
       root.removeAttribute("data-motion");
     };
+
   }, []);
 }
