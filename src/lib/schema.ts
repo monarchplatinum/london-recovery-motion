@@ -29,6 +29,8 @@ export function localBusinessSchema() {
     ],
   };
 
+  base['image'] = absoluteUrl('/og-image.jpg');
+  base['logo'] = absoluteUrl('/icon-512.png');
   if (siteConfig.url) base['url'] = siteConfig.url;
   if (siteConfig.email) base['email'] = siteConfig.email;
   if (siteConfig.openingHours) base['openingHours'] = siteConfig.openingHours;
@@ -60,4 +62,34 @@ export function serviceSchema(name: string, description: string, path: string) {
     areaServed: { "@type": "City", name: "London" },
     url: absoluteUrl(path),
   };
+}
+
+/** Sitewide Organization node — brand identity for knowledge panels. */
+export function organizationSchema() {
+  const base: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": absoluteUrl("/#organization"),
+    name: siteConfig.name,
+    legalName: siteConfig.legalName,
+    identifier: siteConfig.companyNumber,
+    telephone: siteConfig.phoneIntl.replace(/\s/g, ""),
+    address: postalAddress,
+    areaServed: { "@type": "City", name: "London" },
+    logo: absoluteUrl("/icon-512.png"),
+    image: absoluteUrl("/og-image.jpg"),
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: siteConfig.phoneIntl.replace(/\s/g, ""),
+        areaServed: "GB",
+        availableLanguage: ["English"],
+      },
+    ],
+  };
+  if (siteConfig.url) base['url'] = siteConfig.url;
+  if (siteConfig.email) base['email'] = siteConfig.email;
+  if (siteConfig.social.length) base['sameAs'] = siteConfig.social;
+  return base;
 }
