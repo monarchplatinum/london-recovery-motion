@@ -141,50 +141,83 @@ export function HeroScene() {
           </linearGradient>
         </defs>
 
-        <path d="M96 168 L-40 120 L-40 216 Z" fill="url(#beam)" />
+        <path d="M88 150 L-40 106 L-40 200 Z" fill="url(#beam)" />
 
-        {/* flatbed deck + loaded car silhouette */}
-        <g style={{ transform: "translateY(calc(var(--sy) * -6px))" }}>
-          <rect x="250" y="150" width="420" height="16" rx="3" fill="oklch(0.30 0.008 260)" />
+        {/* ground shadow */}
+        <ellipse cx="380" cy="224" rx="310" ry="13" fill="oklch(0 0 0 / 0.5)" />
+
+        {/* chassis rail */}
+        <rect x="104" y="168" width="596" height="14" rx="4" fill="oklch(0.17 0.004 260)" />
+
+        {/* flatbed deck + rear ramp */}
+        <path
+          d="M248 152h444l26 34h-32l-14-18H248Z"
+          fill="oklch(0.30 0.008 260)"
+          stroke="oklch(1 0 0 / 0.10)"
+          strokeWidth="2"
+        />
+
+        {/* loaded car — sits on the deck */}
+        <g style={{ transform: "translateY(calc(var(--sy) * -5px))" }}>
           <path
-            d="M320 150c14-32 30-44 52-46h96c26 2 44 16 66 30l40 16Z"
-            fill="oklch(0.26 0.007 260)"
-            stroke="oklch(1 0 0 / 0.12)"
+            d="M298 138 L300 122 Q302 112 316 109 L380 98 L424 72 Q432 66 446 66 L556 66 Q570 66 576 74 L604 100 L636 108 Q652 112 654 124 L656 138 Z"
+            fill="oklch(0.29 0.009 250)"
+            stroke="oklch(1 0 0 / 0.14)"
             strokeWidth="2"
+            strokeLinejoin="round"
           />
-          <circle cx="372" cy="150" r="14" fill="oklch(0.15 0 0)" />
-          <circle cx="518" cy="150" r="14" fill="oklch(0.15 0 0)" />
+          {/* glasshouse */}
+          <path d="M398 96 L432 75 L472 75 L472 96 Z" fill="oklch(0.52 0.03 240)" opacity="0.5" />
+          <path d="M482 75 L552 75 L576 96 L482 96 Z" fill="oklch(0.52 0.03 240)" opacity="0.38" />
+          {/* wheels on the deck */}
+          <circle cx="354" cy="138" r="14" fill="oklch(0.13 0 0)" />
+          <circle cx="354" cy="138" r="6" fill="oklch(0.34 0.005 260)" />
+          <circle cx="600" cy="138" r="14" fill="oklch(0.13 0 0)" />
+          <circle cx="600" cy="138" r="6" fill="oklch(0.34 0.005 260)" />
+          {/* securing straps */}
+          <g stroke="oklch(0.85 0.15 90 / 0.45)" strokeWidth="3">
+            <path d="M336 152V116" />
+            <path d="M622 152V118" />
+          </g>
         </g>
+
+        {/* winch post behind the cab */}
+        <rect x="250" y="104" width="16" height="50" rx="4" fill="oklch(0.26 0.007 260)" />
 
         {/* cab */}
         <path
-          d="M96 168V96c0-8 6-14 14-14h74c8 0 12 4 16 10l26 40h24v36Z"
+          d="M88 170V112q0-12 12-14l16-2 14-24q5-10 17-10h76q14 0 14 14v94Z"
           fill="url(#body)"
-          stroke="oklch(1 0 0 / 0.14)"
+          stroke="oklch(1 0 0 / 0.16)"
           strokeWidth="2"
+          strokeLinejoin="round"
         />
-        <path d="M120 100h58l20 30h-78Z" fill="oklch(0.46 0.02 240)" opacity="0.55" />
-        <rect x="248" y="120" width="14" height="46" rx="3" fill="oklch(0.28 0.008 260)" />
+        {/* windscreen + side glass */}
+        <path d="M104 124 L120 96 L166 96 L166 124 Z" fill="oklch(0.55 0.03 240)" opacity="0.55" />
+        <path d="M176 96 h44 v28 h-44 Z" fill="oklch(0.55 0.03 240)" opacity="0.4" />
+        {/* bumper + grille */}
+        <rect x="86" y="152" width="24" height="18" rx="4" fill="oklch(0.24 0.006 260)" />
+        <rect x="92" y="130" width="14" height="6" rx="2" fill="oklch(0.24 0.006 260)" />
 
         {/* beacons */}
         <g fill="oklch(0.85 0.15 90)">
-          <rect x="112" y="76" width="16" height="7" rx="3" opacity="0.9" />
-          <rect x="150" y="76" width="16" height="7" rx="3" opacity="0.7" />
+          <rect x="128" y="56" width="18" height="8" rx="4" opacity="0.9" />
+          <rect x="168" y="56" width="18" height="8" rx="4" opacity="0.65" />
         </g>
 
         {/* headlight */}
-        <circle cx="100" cy="150" r="7" fill="oklch(0.97 0.04 90)" />
+        <circle cx="97" cy="146" r="6" fill="oklch(0.97 0.04 90)" />
 
         {/* wheels */}
         <g>
-          <circle cx="140" cy="196" r="26" fill="oklch(0.13 0 0)" />
-          <circle cx="140" cy="196" r="11" fill="oklch(0.3 0.005 260)" />
-          <circle cx="470" cy="196" r="26" fill="oklch(0.13 0 0)" />
-          <circle cx="470" cy="196" r="11" fill="oklch(0.3 0.005 260)" />
-          <circle cx="546" cy="196" r="26" fill="oklch(0.13 0 0)" />
-          <circle cx="546" cy="196" r="11" fill="oklch(0.3 0.005 260)" />
+          <circle cx="158" cy="196" r="26" fill="oklch(0.13 0 0)" />
+          <circle cx="158" cy="196" r="10" fill="oklch(0.32 0.005 260)" />
+          <circle cx="516" cy="196" r="26" fill="oklch(0.13 0 0)" />
+          <circle cx="516" cy="196" r="10" fill="oklch(0.32 0.005 260)" />
+          <circle cx="596" cy="196" r="26" fill="oklch(0.13 0 0)" />
+          <circle cx="596" cy="196" r="10" fill="oklch(0.32 0.005 260)" />
         </g>
-        <ellipse cx="350" cy="228" rx="300" ry="14" fill="oklch(0 0 0 / 0.5)" />
+
       </svg>
     </div>
   );
