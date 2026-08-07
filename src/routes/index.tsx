@@ -1,24 +1,141 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
+import heroImg from "@/assets/hero-truck.jpg";
+import { HeroScene } from "@/components/hero/HeroScene";
+import { WhatsAppCta, CallCta, ContextualCta } from "@/components/cta/Cta";
+import { TrustStrip, QuickAssist } from "@/components/sections/QuickAssist";
+import { Services } from "@/components/sections/Services";
+import { HowItWorks } from "@/components/sections/HowItWorks";
+import { Coverage } from "@/components/sections/Coverage";
+import { WhyChoose, TransportSection, Scenarios } from "@/components/sections/HomeBlocks";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { FaqList, faqSchema } from "@/components/sections/Faq";
+import { homeFaqs } from "@/content/faqs";
+import { waMessages, absoluteUrl } from "@/config/site";
+import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Vehicle Recovery London | Towing & Vehicle Transport | MPG Recovery";
+const description =
+  "London vehicle recovery, towing and vehicle transport from MPG Recovery. WhatsApp or call 07884 889128 for vehicle recovery and transport enquiries.";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: absoluteUrl("/") || "/" }],
+    scripts: [
+      { type: "application/ld+json", children: JSON.stringify(localBusinessSchema()) },
+      { type: "application/ld+json", children: JSON.stringify(websiteSchema()) },
+      { type: "application/ld+json", children: JSON.stringify(faqSchema(homeFaqs)) },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <section className="relative isolate overflow-hidden">
+        <img
+          src={heroImg}
+          alt="A flatbed recovery truck parked on a wet London street at night beside railway arches"
+          width={1600}
+          height={1104}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 size-full object-cover opacity-35"
+        />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,transparent,var(--background)_78%)]"
+          aria-hidden="true"
+        />
+        <HeroScene />
+
+        <div className="relative mx-auto max-w-7xl px-4 pb-28 pt-16 sm:px-6 sm:pb-40 sm:pt-24">
+          <div className="max-w-2xl">
+            <p className="text-eyebrow">London Vehicle Recovery &amp; Transport</p>
+            <h1 className="mt-4 text-balance font-display text-[2.6rem] font-extrabold leading-[0.94] sm:text-6xl md:text-7xl">
+              Stranded? We&rsquo;ll Get You Moving.
+            </h1>
+            <p className="mt-4 font-display text-sm font-bold uppercase tracking-[0.28em] text-primary">
+              Recovery. Transport. Delivered.
+            </p>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Reliable vehicle recovery, towing and vehicle transport across London and
+              surrounding areas. Message MPG Recovery on WhatsApp or call us directly to
+              arrange assistance.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <WhatsAppCta label="WhatsApp MPG Recovery" size="lg" pulse />
+              <CallCta size="lg" />
+            </div>
+
+            <div className="mt-7">
+              <TrustStrip />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <QuickAssist />
+
+      <div className="sr-only">
+        <h2>Vehicle Recovery &amp; Transport in London</h2>
+      </div>
+
+      <Services />
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <ContextualCta
+          heading="Need recovery?"
+          label="Message us on WhatsApp"
+          message={waMessages.recovery}
+          event="recovery_enquiry_click"
+        />
+      </div>
+
+      <HowItWorks />
+      <Coverage />
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <ContextualCta
+          heading="Need a vehicle transported?"
+          label="Get a quote on WhatsApp"
+          message={waMessages.transport}
+          event="transport_quote_click"
+        />
+      </div>
+
+      <WhyChoose />
+      <TransportSection />
+      <Scenarios />
+
+      <section id="faq" className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
+        <p className="text-eyebrow">FAQ</p>
+        <h2 className="mt-3 font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
+          Questions before you message
+        </h2>
+        <div className="mt-8">
+          <FaqList items={homeFaqs} />
+        </div>
+        <p className="mt-8 text-sm text-muted-foreground">
+          Still unsure?{" "}
+          <Link to="/contact" className="text-primary hover:underline">
+            Contact MPG Recovery
+          </Link>{" "}
+          and describe the vehicle and where it needs to go.
+        </p>
+      </section>
+
+      <ContactSection />
+    </>
   );
 }
