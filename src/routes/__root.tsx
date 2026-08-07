@@ -15,6 +15,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileDock } from "@/components/layout/MobileDock";
 import { siteConfig } from "@/config/site";
+import { useRevealObserver } from "@/hooks/use-motion";
+
 
 function NotFoundComponent() {
   return (
