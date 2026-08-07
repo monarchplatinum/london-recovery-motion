@@ -46,7 +46,7 @@ export function ScrollHud() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-x-0 top-[var(--header-h,64px)] z-40 hidden select-none sm:block"
+      className="pointer-events-none absolute inset-x-0 -bottom-[1px] z-40 hidden select-none sm:block"
     >
       <div ref={railRef} className="relative h-[3px] w-full bg-[oklch(1_0_0_/_0.06)] [--p:0]">
         {/* travelled road */}
