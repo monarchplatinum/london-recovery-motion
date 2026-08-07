@@ -43,8 +43,9 @@ export function Logo({
       <span
         className={cn(
           "font-display font-extrabold uppercase leading-[0.86] tracking-tight",
-          stacked ? "flex flex-col text-xl" : "text-lg",
+          stacked ? "flex flex-col text-xl" : "whitespace-nowrap text-lg",
         )}
+
       >
         <span className="text-foreground">MPG</span>{" "}
         <span className="text-muted-foreground">Recovery</span>
