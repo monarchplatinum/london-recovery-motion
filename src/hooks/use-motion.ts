@@ -66,3 +66,68 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>() {
 
   return ref;
 }
+
+/**
+ * Document-wide scroll reveal.
+ *
+ * Mounted once at the root. Every `.reveal` element in the document is
+ * observed, including ones added later, so sections never depend on being
+ * nested inside a particular ref. If motion is reduced or observers are
+ * unavailable, `data-motion` is never set and everything stays visible.
+ */
+export function useRevealObserver() {
+  useEffect(() => {
+    const root = document.documentElement;
+
+    if (
+      typeof IntersectionObserver === "undefined" ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    root.setAttribute("data-motion", "on");
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            (entry.target as HTMLElement).setAttribute("data-revealed", "true");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -6% 0px", threshold: 0.05 },
+    );
+
+    const observeAll = () => {
+      document
+        .querySelectorAll<HTMLElement>(".reveal:not([data-revealed='true'])")
+        .forEach((el) => io.observe(el));
+    };
+
+    observeAll();
+
+    const mo = new MutationObserver(observeAll);
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    // Safety net: anything still hidden after 3s is shown regardless.
+    const timer = window.setTimeout(() => {
+      document
+        .querySelectorAll<HTMLElement>(".reveal:not([data-revealed='true'])")
+        .forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 1.5) {
+            el.setAttribute("data-revealed", "true");
+          }
+        });
+    }, 3000);
+
+    return () => {
+      io.disconnect();
+      mo.disconnect();
+      window.clearTimeout(timer);
+      root.removeAttribute("data-motion");
+    };
+  }, []);
+}
