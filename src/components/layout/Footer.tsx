@@ -61,14 +61,14 @@ export function Footer() {
             {serviceAreas.map((area) => (
               <li key={area.slug}>
                 <Link
-                  to="/vehicle-recovery-$area"
-                  params={{ area: area.slug }}
+                  to={`/vehicle-recovery-${area.slug}` as "/"}
                   className="text-foreground/85 hover:text-primary"
                 >
                   Vehicle Recovery {area.name}
                 </Link>
               </li>
             ))}
+
           </ul>
         </nav>
       </div>
