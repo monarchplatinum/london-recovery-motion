@@ -130,8 +130,10 @@ export function useRevealObserver() {
     return () => {
       io.disconnect();
       mo.disconnect();
+      window.clearTimeout(start);
       window.clearTimeout(timer);
       root.removeAttribute("data-motion");
     };
+
   }, []);
 }
