@@ -146,12 +146,13 @@ export function HeroScene() {
       <svg
         viewBox="0 0 720 260"
         preserveAspectRatio="xMidYMax meet"
-        className="absolute bottom-[7%] left-1/2 h-[42%] w-[min(96%,940px)] -translate-x-1/2"
+        className="absolute bottom-[9%] left-[64%] h-[34%] w-[min(58%,660px)] -translate-x-1/2 opacity-90"
         style={{
           transform:
-            "translate3d(calc(-50% + var(--px) * 44px + var(--sy) * 90px), calc(var(--py) * 10px), 0)",
+            "translate3d(calc(-50% + var(--px) * 34px + var(--sy) * 70px), calc(var(--py) * 10px), 0)",
         }}
       >
+
         {/* headlight beam */}
         <defs>
           <linearGradient id="beam" x1="1" y1="0" x2="0" y2="0">
