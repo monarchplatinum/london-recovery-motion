@@ -57,8 +57,13 @@ function Home() {
           aria-hidden="true"
         />
         <HeroScene />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-background via-background/70 to-transparent"
+          aria-hidden="true"
+        />
 
-        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-9 sm:px-6 sm:pb-40 sm:pt-24">
+        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-9 sm:min-h-[82svh] sm:px-6 sm:pb-48 sm:pt-24">
+
           <div className="max-w-2xl">
             <p className="text-eyebrow">London Vehicle Recovery &amp; Transport</p>
             <h1 className="mt-3 text-balance font-display text-[2.25rem] font-extrabold leading-[0.95] sm:text-6xl md:text-7xl">
