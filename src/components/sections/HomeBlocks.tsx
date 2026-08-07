@@ -91,20 +91,22 @@ export function TransportSection() {
             <li>Auction and trade movements</li>
             <li>Relocations and long-term storage moves</li>
           </ul>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <WhatsAppCta
-              label="Get a quote on WhatsApp"
+              label="Get a quote"
               message={waMessages.transport}
               event="transport_quote_click"
               size="lg"
+              className="sm:whitespace-nowrap"
             />
             <Link
               to="/vehicle-transport-london"
-              className="inline-flex min-h-11 items-center justify-center rounded-lg border border-border px-5 py-3 font-display text-sm font-bold uppercase tracking-wide transition-colors hover:border-primary/60 hover:text-primary"
+              className="inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-lg border border-border px-5 py-3 font-display text-sm font-bold uppercase tracking-wide transition-colors hover:border-primary/60 hover:text-primary"
             >
               Vehicle transport London
             </Link>
           </div>
+
         </div>
       </div>
     </section>
