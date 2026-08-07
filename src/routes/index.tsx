@@ -123,15 +123,16 @@ function Home() {
       <TransportSection />
       <Scenarios />
 
-      <section id="faq" className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-24">
+      <section id="faq" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">FAQ</p>
         <h2 className="mt-3 text-balance font-display text-[1.8rem] font-extrabold sm:text-4xl md:text-5xl">
           Questions before you message
         </h2>
-        <div className="mt-8">
+        <div className="mt-8 max-w-3xl">
           <FaqList items={homeFaqs} />
         </div>
-        <p className="mt-8 text-sm text-muted-foreground">
+        <p className="mt-8 max-w-3xl text-sm text-muted-foreground">
+
           Still unsure?{" "}
           <Link to="/contact" className="text-primary hover:underline">
             Contact MPG Recovery
