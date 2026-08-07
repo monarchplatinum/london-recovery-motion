@@ -21,7 +21,7 @@ const ctaVariants = cva(
       size: {
         sm: "px-4 py-2.5 text-xs",
         md: "px-5 py-3 text-sm",
-        lg: "px-6 py-4 text-sm sm:text-base",
+        lg: "px-5 py-4 text-sm sm:px-6 sm:text-base",
       },
       full: { true: "w-full", false: "" },
     },
@@ -100,12 +100,18 @@ export function ContextualCta({
   return (
     <div
       className={cn(
-        "surface-panel flex flex-col items-start gap-4 rounded-xl p-6 sm:flex-row sm:items-center sm:justify-between",
+        "surface-panel flex flex-col items-stretch gap-4 rounded-xl p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6",
         className,
       )}
     >
       <p className="font-display text-lg font-bold sm:text-xl">{heading}</p>
-      <WhatsAppCta label={label} message={message} event={event} size="md" />
+      <WhatsAppCta
+        label={label}
+        message={message}
+        event={event}
+        size="md"
+        className="w-full shrink-0 sm:w-auto"
+      />
     </div>
   );
 }

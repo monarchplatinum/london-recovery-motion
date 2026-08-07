@@ -58,27 +58,27 @@ function Home() {
         />
         <HeroScene />
 
-        <div className="relative mx-auto max-w-7xl px-4 pb-28 pt-16 sm:px-6 sm:pb-40 sm:pt-24">
+        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-9 sm:px-6 sm:pb-40 sm:pt-24">
           <div className="max-w-2xl">
             <p className="text-eyebrow">London Vehicle Recovery &amp; Transport</p>
-            <h1 className="mt-4 text-balance font-display text-[2.6rem] font-extrabold leading-[0.94] sm:text-6xl md:text-7xl">
+            <h1 className="mt-3 text-balance font-display text-[2.25rem] font-extrabold leading-[0.95] sm:text-6xl md:text-7xl">
               Stranded? We&rsquo;ll Get You Moving.
             </h1>
-            <p className="mt-4 font-display text-sm font-bold uppercase tracking-[0.28em] text-primary">
+            <p className="mt-3 font-display text-[0.72rem] font-bold uppercase tracking-[0.16em] text-primary sm:text-sm sm:tracking-[0.28em]">
               Recovery. Transport. Delivered.
             </p>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="mt-4 max-w-xl text-[0.98rem] leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg">
               Reliable vehicle recovery, towing and vehicle transport across London and
               surrounding areas. Message MPG Recovery on WhatsApp or call us directly to
               arrange assistance.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <WhatsAppCta label="WhatsApp MPG Recovery" size="lg" pulse />
-              <CallCta size="lg" />
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+              <WhatsAppCta label="WhatsApp MPG Recovery" size="lg" pulse className="w-full sm:w-auto" />
+              <CallCta size="lg" className="w-full sm:w-auto" />
             </div>
 
-            <div className="mt-7">
+            <div className="mt-6 sm:mt-7">
               <TrustStrip />
             </div>
           </div>
@@ -118,9 +118,9 @@ function Home() {
       <TransportSection />
       <Scenarios />
 
-      <section id="faq" className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
+      <section id="faq" className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">FAQ</p>
-        <h2 className="mt-3 font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
+        <h2 className="mt-3 text-balance font-display text-[1.8rem] font-extrabold sm:text-4xl md:text-5xl">
           Questions before you message
         </h2>
         <div className="mt-8">

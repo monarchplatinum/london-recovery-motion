@@ -75,7 +75,7 @@ function Page() {
         ctaMessage={waMessages.transport}
       />
 
-      <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
         <ul className="grid gap-4 sm:grid-cols-2">
           {areas.map((area) => (
             <li key={area.name}>

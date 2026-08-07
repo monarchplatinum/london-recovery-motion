@@ -9,14 +9,14 @@ export function ContactSection({ id = "contact" }: { id?: string }) {
 
   return (
     <section id={id} className="border-t border-border bg-surface/40 grid-lines">
-      <div ref={ref} className="reveal mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
+      <div ref={ref} className="reveal mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
           <div>
             <p className="text-eyebrow">Contact MPG Recovery</p>
-            <h2 className="mt-3 text-balance font-display text-4xl font-extrabold leading-[0.98] sm:text-5xl md:text-6xl">
+            <h2 className="mt-2.5 text-balance font-display text-[2.1rem] font-extrabold leading-[0.98] sm:text-5xl md:text-6xl">
               Need Your Vehicle Moved?
             </h2>
-            <p className="mt-5 max-w-xl text-lg text-muted-foreground">
+            <p className="mt-4 max-w-xl text-[1.02rem] sm:text-lg text-muted-foreground">
               Send us your location and vehicle details on WhatsApp or call MPG Recovery
               directly.
             </p>
@@ -27,8 +27,9 @@ export function ContactSection({ id = "contact" }: { id?: string }) {
                 message={waMessages.general}
                 size="lg"
                 pulse
+                className="w-full sm:w-auto"
               />
-              <CallCta label={siteConfig.phoneDisplay} size="lg" />
+              <CallCta label={siteConfig.phoneDisplay} size="lg" className="w-full sm:w-auto" />
             </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">

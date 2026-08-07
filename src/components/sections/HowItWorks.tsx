@@ -23,13 +23,13 @@ export function HowItWorks() {
 
   return (
     <section className="border-y border-border bg-surface/30">
-      <div ref={ref} className="reveal mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+      <div ref={ref} className="reveal mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">How it works</p>
-        <h2 className="mt-3 font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
+        <h2 className="mt-3 text-balance font-display text-[1.8rem] font-extrabold sm:text-4xl md:text-5xl">
           Three steps to getting moving
         </h2>
 
-        <div className="relative mt-12">
+        <div className="relative mt-9 sm:mt-12">
           {/* animated route line */}
           <svg
             aria-hidden="true"
@@ -50,13 +50,13 @@ export function HowItWorks() {
             />
           </svg>
 
-          <ol className="relative grid gap-8 md:grid-cols-3">
+          <ol className="relative grid gap-7 md:grid-cols-3">
             {steps.map((step) => (
               <li key={step.n} data-reveal-child className="reveal">
-                <div className="flex size-14 items-center justify-center rounded-full border border-primary/40 bg-background font-display text-lg font-extrabold text-primary">
+                <div className="flex size-12 sm:size-14 items-center justify-center rounded-full border border-primary/40 bg-background font-display text-lg font-extrabold text-primary">
                   {step.n}
                 </div>
-                <h3 className="mt-5 font-display text-xl font-bold">{step.title}</h3>
+                <h3 className="mt-4 font-display text-lg font-bold sm:mt-5 sm:text-xl">{step.title}</h3>
                 <p className="mt-2 max-w-xs text-sm leading-relaxed text-muted-foreground">
                   {step.copy}
                 </p>

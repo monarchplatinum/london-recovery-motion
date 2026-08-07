@@ -10,7 +10,9 @@ const items = [
 export function TrustStrip({ compact = false }: { compact?: boolean }) {
   return (
     <ul
-      className={`flex flex-wrap gap-x-5 gap-y-3 ${compact ? "text-[0.7rem]" : "text-xs"}`}
+      className={`grid grid-cols-2 gap-x-4 gap-y-2.5 sm:flex sm:flex-wrap sm:gap-x-5 sm:gap-y-3 ${
+        compact ? "text-[0.7rem]" : "text-[0.68rem] sm:text-xs"
+      }`}
       aria-label="Service indicators"
     >
       {items.map((item) => {
@@ -18,10 +20,10 @@ export function TrustStrip({ compact = false }: { compact?: boolean }) {
         return (
           <li
             key={item.label}
-            className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-[0.14em] text-muted-foreground"
+            className="inline-flex min-w-0 items-center gap-2 font-display font-bold uppercase tracking-[0.1em] text-muted-foreground sm:tracking-[0.14em]"
           >
-            <Icon className="size-4 text-primary" aria-hidden="true" />
-            {item.label}
+            <Icon className="size-4 shrink-0 text-primary" aria-hidden="true" />
+            <span className="truncate">{item.label}</span>
           </li>
         );
       })}
@@ -29,36 +31,37 @@ export function TrustStrip({ compact = false }: { compact?: boolean }) {
   );
 }
 
+const assists = [
+  {
+    title: "Broken down?",
+    copy: "Send your location and vehicle details on WhatsApp — it\u2019s the fastest way to reach us.",
+  },
+  {
+    title: "Bought a vehicle?",
+    copy: "Give us the collection and delivery postcodes and the make and model.",
+  },
+  {
+    title: "Going to a garage?",
+    copy: "Tell us whether the vehicle runs, rolls and steers, and where it needs to be.",
+  },
+];
+
 /** Quick assistance bar directly under the hero. */
 export function QuickAssist() {
   return (
     <section aria-label="Quick assistance" className="border-y border-border bg-surface/50">
-      <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 md:grid-cols-3">
-        <div>
-          <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-primary">
-            Broken down?
-          </h2>
-          <p className="mt-1.5 text-sm text-muted-foreground">
-            Send your location and vehicle details on WhatsApp — it&rsquo;s the fastest way
-            to reach us.
-          </p>
-        </div>
-        <div>
-          <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-primary">
-            Bought a vehicle?
-          </h2>
-          <p className="mt-1.5 text-sm text-muted-foreground">
-            Give us the collection and delivery postcodes and the make and model.
-          </p>
-        </div>
-        <div>
-          <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-primary">
-            Going to a garage?
-          </h2>
-          <p className="mt-1.5 text-sm text-muted-foreground">
-            Tell us whether the vehicle runs, rolls and steers, and where it needs to be.
-          </p>
-        </div>
+      <div className="mx-auto grid max-w-7xl gap-3 px-4 py-6 sm:gap-6 sm:px-6 sm:py-8 md:grid-cols-3">
+        {assists.map((item) => (
+          <div
+            key={item.title}
+            className="rounded-xl border border-border/70 bg-surface-2/40 p-4 md:border-0 md:bg-transparent md:p-0"
+          >
+            <h2 className="font-display text-[0.8rem] font-bold uppercase tracking-[0.14em] text-primary sm:text-sm sm:tracking-[0.18em]">
+              {item.title}
+            </h2>
+            <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{item.copy}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

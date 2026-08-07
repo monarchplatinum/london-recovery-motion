@@ -17,7 +17,7 @@ export function TransportRoute() {
 
   return (
     <section className="border-b border-border bg-surface/30">
-      <div ref={ref} className="reveal mx-auto max-w-5xl px-4 py-14 sm:px-6">
+      <div ref={ref} className="reveal mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
         <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
           Collection to destination
         </h2>
