@@ -142,7 +142,7 @@ export function Coverage() {
                     letterSpacing="1.2"
                     fontFamily="var(--font-display)"
                   >
-                    {a.label.replace(" London", "").toUpperCase()}
+                    {a.name.replace(" London", "").toUpperCase()}
                   </text>
                 </g>
               );
