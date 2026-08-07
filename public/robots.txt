@@ -19,4 +19,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://london-recovery-motion.lovable.app/sitemap.xml
+Sitemap: https://mpgrecovery.com/sitemap.xml

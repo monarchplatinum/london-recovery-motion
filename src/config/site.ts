@@ -60,7 +60,7 @@ export const siteConfig = {
 
   // --- Site --------------------------------------------------------------
   /** Production domain. Update if a custom domain is connected. */
-  url: "https://london-recovery-motion.lovable.app",
+  url: "https://mpgrecovery.com",
 
   areaServed: "London",
 } as const;
