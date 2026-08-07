@@ -44,10 +44,10 @@ export function RoadDivider({ reverse = false }: { reverse?: boolean }) {
         <div className="absolute inset-x-0 bottom-4 h-[2px] bg-[oklch(1_0_0_/_0.08)]" />
         <div className="road-dash-x absolute inset-x-0 bottom-4 h-[2px] opacity-30" />
         <div
-          className="absolute bottom-[10px] left-0 will-change-transform"
-          style={{ transform: "translateX(calc(var(--t) * (100% * 0 + 100cqw)))" }}
+          className="absolute bottom-[10px] will-change-transform"
+          style={{ left: "calc(var(--t) * 100%)", transform: "translateX(calc(var(--t) * -100%))" }}
         >
-          <div style={{ transform: "translateX(calc(var(--t) * 0px))" }}>
+          <div>
             <svg width="72" height="30" viewBox="0 0 64 26" fill="none">
               <path
                 d="M22 6h26l6 8h4a2 2 0 0 1 2 2v3H22Z"
