@@ -219,6 +219,72 @@
   animation: dash-travel 6s linear infinite;
 }
 
+
+/* --- Game-style scroll motion --- */
+@keyframes hud-dash {
+  to { background-position-x: -48px; }
+}
+
+@utility road-dash-x {
+  background-image: linear-gradient(90deg, oklch(1 0 0 / 0.5) 0 18px, transparent 18px 48px);
+  background-size: 48px 100%;
+  animation: hud-dash 1.1s linear infinite;
+}
+
+@keyframes hud-spin {
+  to { transform: rotate(360deg); }
+}
+
+.hud-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hud-spin 0.7s linear infinite;
+}
+
+@keyframes beacon-flash {
+  0%, 60%, 100% { opacity: 0.35; }
+  70%, 85% { opacity: 1; }
+}
+
+.hud-beacon,
+.scene-beacon {
+  animation: beacon-flash 1.6s ease-in-out infinite;
+}
+
+.scene-beacon-2 {
+  animation: beacon-flash 1.6s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+/* Wheels rotate with scroll position rather than on a timer. */
+.scene-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(calc(var(--sy, 0) * 900deg));
+}
+
+@keyframes speed-streak {
+  0% { opacity: 0; transform: translateX(40px); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-260px); }
+}
+
+.speed-streak {
+  animation: speed-streak 1.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hud-wheel,
+  .hud-beacon,
+  .scene-beacon,
+  .scene-beacon-2,
+  .speed-streak,
+  .road-dash-x {
+    animation: none !important;
+  }
+  .scene-wheel { transform: none !important; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
