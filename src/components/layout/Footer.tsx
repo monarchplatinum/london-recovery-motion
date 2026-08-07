@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Logo } from "@/components/brand/Logo";
+import { SocialLinks } from "@/components/layout/SocialLinks";
 import { siteConfig, whatsappLink, waMessages, serviceAreas } from "@/config/site";
 import { trackConversion } from "@/lib/analytics";
 
