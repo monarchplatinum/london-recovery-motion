@@ -160,25 +160,26 @@ export function HeroScene() {
         {/* loaded car — sits on the deck */}
         <g style={{ transform: "translateY(calc(var(--sy) * -5px))" }}>
           <path
-            d="M298 138 L300 122 Q302 112 316 109 L380 98 L424 72 Q432 66 446 66 L556 66 Q570 66 576 74 L604 100 L636 108 Q652 112 654 124 L656 138 Z"
+            d="M300 138 L302 120 Q304 110 318 106 L372 96 L408 68 Q416 60 432 60 L522 60 Q538 60 546 70 L576 96 L604 104 Q618 108 618 120 L618 138 Z"
             fill="oklch(0.29 0.009 250)"
-            stroke="oklch(1 0 0 / 0.14)"
+            stroke="oklch(1 0 0 / 0.16)"
             strokeWidth="2"
             strokeLinejoin="round"
           />
           {/* glasshouse */}
-          <path d="M398 96 L432 75 L472 75 L472 96 Z" fill="oklch(0.52 0.03 240)" opacity="0.5" />
-          <path d="M482 75 L552 75 L576 96 L482 96 Z" fill="oklch(0.52 0.03 240)" opacity="0.38" />
+          <path d="M382 94 L414 70 L452 70 L452 94 Z" fill="oklch(0.55 0.03 240)" opacity="0.5" />
+          <path d="M462 70 L520 70 L542 94 L462 94 Z" fill="oklch(0.55 0.03 240)" opacity="0.36" />
           {/* wheels on the deck */}
-          <circle cx="354" cy="138" r="14" fill="oklch(0.13 0 0)" />
-          <circle cx="354" cy="138" r="6" fill="oklch(0.34 0.005 260)" />
-          <circle cx="600" cy="138" r="14" fill="oklch(0.13 0 0)" />
-          <circle cx="600" cy="138" r="6" fill="oklch(0.34 0.005 260)" />
+          <circle cx="360" cy="136" r="16" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.18)" strokeWidth="2" />
+          <circle cx="360" cy="136" r="6" fill="oklch(0.36 0.005 260)" />
+          <circle cx="556" cy="136" r="16" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.18)" strokeWidth="2" />
+          <circle cx="556" cy="136" r="6" fill="oklch(0.36 0.005 260)" />
           {/* securing straps */}
           <g stroke="oklch(0.85 0.15 90 / 0.45)" strokeWidth="3">
-            <path d="M336 152V116" />
-            <path d="M622 152V118" />
+            <path d="M338 152V114" />
+            <path d="M590 152V116" />
           </g>
+
         </g>
 
         {/* winch post behind the cab */}
@@ -210,13 +211,14 @@ export function HeroScene() {
 
         {/* wheels */}
         <g>
-          <circle cx="158" cy="196" r="26" fill="oklch(0.13 0 0)" />
-          <circle cx="158" cy="196" r="10" fill="oklch(0.32 0.005 260)" />
-          <circle cx="516" cy="196" r="26" fill="oklch(0.13 0 0)" />
-          <circle cx="516" cy="196" r="10" fill="oklch(0.32 0.005 260)" />
-          <circle cx="596" cy="196" r="26" fill="oklch(0.13 0 0)" />
-          <circle cx="596" cy="196" r="10" fill="oklch(0.32 0.005 260)" />
+          <circle cx="158" cy="196" r="26" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.16)" strokeWidth="2" />
+          <circle cx="158" cy="196" r="10" fill="oklch(0.34 0.005 260)" />
+          <circle cx="516" cy="196" r="26" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.16)" strokeWidth="2" />
+          <circle cx="516" cy="196" r="10" fill="oklch(0.34 0.005 260)" />
+          <circle cx="596" cy="196" r="26" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.16)" strokeWidth="2" />
+          <circle cx="596" cy="196" r="10" fill="oklch(0.34 0.005 260)" />
         </g>
+
 
       </svg>
     </div>
