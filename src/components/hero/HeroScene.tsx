@@ -219,11 +219,11 @@ export function HeroScene() {
         {/* wheels */}
         <g>
           <circle cx="158" cy="196" r="26" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.16)" strokeWidth="2" />
-          <g className="scene-wheel" style={{ transformOrigin: "158px 196px" }}><circle cx="158" cy="196" r="10" fill="oklch(0.34 0.005 260)" /><path d="M158 178v36M140 196h36" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" /></g>
+          <g className="scene-wheel"><circle cx="158" cy="196" r="10" fill="oklch(0.34 0.005 260)" /><path d="M158 178v36M140 196h36" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" /></g>
           <circle cx="516" cy="196" r="26" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.16)" strokeWidth="2" />
-          <g className="scene-wheel" style={{ transformOrigin: "516px 196px" }}><circle cx="516" cy="196" r="10" fill="oklch(0.34 0.005 260)" /><path d="M516 178v36M498 196h36" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" /></g>
+          <g className="scene-wheel"><circle cx="516" cy="196" r="10" fill="oklch(0.34 0.005 260)" /><path d="M516 178v36M498 196h36" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" /></g>
           <circle cx="596" cy="196" r="26" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.16)" strokeWidth="2" />
-          <g className="scene-wheel" style={{ transformOrigin: "596px 196px" }}><circle cx="596" cy="196" r="10" fill="oklch(0.34 0.005 260)" /><path d="M596 178v36M578 196h36" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" /></g>
+          <g className="scene-wheel"><circle cx="596" cy="196" r="10" fill="oklch(0.34 0.005 260)" /><path d="M596 178v36M578 196h36" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" /></g>
         </g>
 
 
