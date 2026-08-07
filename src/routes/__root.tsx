@@ -128,6 +128,9 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  useRevealObserver();
+
+
 
   return (
     <QueryClientProvider client={queryClient}>
