@@ -114,8 +114,9 @@ export function HeroScene() {
       <svg
         viewBox="0 0 1200 260"
         preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-0 h-[24%] w-full sm:h-[30%]"
+        className="absolute inset-x-0 bottom-0 h-[24%] w-full opacity-80 sm:h-[26%]"
         style={{ transform: "translate3d(calc(var(--px) * -46px), 0, 0) scale(1.12)" }}
+
       >
         <rect width="1200" height="260" fill="oklch(0.19 0.005 260)" />
         <line x1="0" y1="18" x2="1200" y2="18" stroke="oklch(1 0 0 / 0.1)" strokeWidth="2" />
