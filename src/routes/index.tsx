@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-truck.jpg";
 import { HeroScene } from "@/components/hero/HeroScene";
+import { RoadDivider } from "@/components/motion/RoadDivider";
 import { WhatsAppCta, CallCta, ContextualCta } from "@/components/cta/Cta";
 import { TrustStrip, QuickAssist } from "@/components/sections/QuickAssist";
 import { Services } from "@/components/sections/Services";
