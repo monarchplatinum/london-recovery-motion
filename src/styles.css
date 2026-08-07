@@ -161,19 +161,28 @@
   border-top: 1px solid var(--hairline);
 }
 
-/* Scroll reveal: visible by default, animated only when JS opts in */
+/*
+ * Scroll reveal.
+ * Content is VISIBLE by default and only hidden once the global reveal
+ * observer has flagged the document (html[data-motion="on"]). Without that
+ * flag — no JS, hydration failure, reduced motion — nothing ever disappears.
+ */
 @utility reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+  transform: none;
 
-  &[data-revealed="true"] {
-    opacity: 1;
-    transform: none;
+  :root[data-motion="on"] &:not([data-revealed="true"]) {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  :root[data-motion="on"] & {
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
+
 
 @utility magnetic {
   transition:
