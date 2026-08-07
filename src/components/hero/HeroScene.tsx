@@ -143,6 +143,13 @@ export function HeroScene() {
 
         <path d="M88 150 L-40 106 L-40 200 Z" fill="url(#beam)" />
 
+        {/* speed streaks */}
+        <g stroke="oklch(0.9 0.02 90 / 0.35)" strokeWidth="3" strokeLinecap="round">
+          <path className="speed-streak" d="M700 132h90" />
+          <path className="speed-streak" style={{ animationDelay: "0.45s" }} d="M700 170h60" />
+          <path className="speed-streak" style={{ animationDelay: "0.9s" }} d="M700 206h110" />
+        </g>
+
         {/* ground shadow */}
         <ellipse cx="380" cy="224" rx="310" ry="13" fill="oklch(0 0 0 / 0.5)" />
 
@@ -171,9 +178,9 @@ export function HeroScene() {
           <path d="M462 70 L520 70 L542 94 L462 94 Z" fill="oklch(0.55 0.03 240)" opacity="0.36" />
           {/* wheels on the deck */}
           <circle cx="360" cy="136" r="16" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.18)" strokeWidth="2" />
-          <circle cx="360" cy="136" r="6" fill="oklch(0.36 0.005 260)" />
+          <circle className="scene-wheel" cx="360" cy="136" r="6" fill="oklch(0.36 0.005 260)" />
           <circle cx="556" cy="136" r="16" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.18)" strokeWidth="2" />
-          <circle cx="556" cy="136" r="6" fill="oklch(0.36 0.005 260)" />
+          <circle className="scene-wheel" cx="556" cy="136" r="6" fill="oklch(0.36 0.005 260)" />
           {/* securing straps */}
           <g stroke="oklch(0.85 0.15 90 / 0.45)" strokeWidth="3">
             <path d="M338 152V114" />
@@ -202,8 +209,8 @@ export function HeroScene() {
 
         {/* beacons */}
         <g fill="oklch(0.85 0.15 90)">
-          <rect x="128" y="56" width="18" height="8" rx="4" opacity="0.9" />
-          <rect x="168" y="56" width="18" height="8" rx="4" opacity="0.65" />
+          <rect className="scene-beacon" x="128" y="56" width="18" height="8" rx="4" />
+          <rect className="scene-beacon-2" x="168" y="56" width="18" height="8" rx="4" />
         </g>
 
         {/* headlight */}
@@ -212,11 +219,11 @@ export function HeroScene() {
         {/* wheels */}
         <g>
           <circle cx="158" cy="196" r="26" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.16)" strokeWidth="2" />
-          <circle cx="158" cy="196" r="10" fill="oklch(0.34 0.005 260)" />
+          <g className="scene-wheel"><circle cx="158" cy="196" r="10" fill="oklch(0.34 0.005 260)" /><path d="M158 178v36M140 196h36" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" /></g>
           <circle cx="516" cy="196" r="26" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.16)" strokeWidth="2" />
-          <circle cx="516" cy="196" r="10" fill="oklch(0.34 0.005 260)" />
+          <g className="scene-wheel"><circle cx="516" cy="196" r="10" fill="oklch(0.34 0.005 260)" /><path d="M516 178v36M498 196h36" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" /></g>
           <circle cx="596" cy="196" r="26" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.16)" strokeWidth="2" />
-          <circle cx="596" cy="196" r="10" fill="oklch(0.34 0.005 260)" />
+          <g className="scene-wheel"><circle cx="596" cy="196" r="10" fill="oklch(0.34 0.005 260)" /><path d="M596 178v36M578 196h36" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" /></g>
         </g>
 
 

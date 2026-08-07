@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-truck.jpg";
 import { HeroScene } from "@/components/hero/HeroScene";
+import { RoadDivider } from "@/components/motion/RoadDivider";
 import { WhatsAppCta, CallCta, ContextualCta } from "@/components/cta/Cta";
 import { TrustStrip, QuickAssist } from "@/components/sections/QuickAssist";
 import { Services } from "@/components/sections/Services";
@@ -91,6 +92,7 @@ function Home() {
         <h2>Vehicle Recovery &amp; Transport in London</h2>
       </div>
 
+      <RoadDivider />
       <Services />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -104,6 +106,7 @@ function Home() {
 
       <HowItWorks />
       <Coverage />
+      <RoadDivider reverse />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <ContextualCta

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
+import { ScrollHud } from "@/components/motion/ScrollHud";
 import { Logo } from "@/components/brand/Logo";
 import { WhatsAppCta } from "@/components/cta/Cta";
 import { siteConfig } from "@/config/site";
@@ -84,6 +85,7 @@ export function Header() {
           </ul>
         </nav>
       ) : null}
+      <ScrollHud />
     </header>
   );
 }
