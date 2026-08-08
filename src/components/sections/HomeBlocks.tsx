@@ -67,7 +67,7 @@ export function TransportSection() {
         <div className="overflow-hidden rounded-2xl border border-border">
           <img
             src={transportImg}
-            alt="A car being secured onto the deck of a flatbed transporter on a London street at dusk"
+            alt="A car secured on the deck of a white flatbed vehicle transporter in daylight"
             width={1408}
             height={1008}
             loading="lazy"
@@ -139,7 +139,7 @@ export function Scenarios() {
     <section className="relative overflow-hidden border-y border-border">
       <img
         src={londonRoadImg}
-        alt="An empty East London street at night beneath brick railway arches"
+        alt="An empty London road in bright daylight"
         width={1408}
         height={912}
         loading="lazy"

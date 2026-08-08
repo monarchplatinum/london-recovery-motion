@@ -40,12 +40,12 @@ function Home() {
       <section className="relative isolate overflow-hidden">
         <img
           src={heroImg}
-          alt="A flatbed recovery truck parked on a wet London street at night beside railway arches"
+          alt="A white flatbed recovery truck parked on a London street in daylight"
           width={1600}
           height={1104}
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-0 size-full object-cover opacity-20"
+          className="absolute inset-0 size-full object-cover opacity-30"
         />
         <div
           className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,transparent,var(--background)_78%)]"
