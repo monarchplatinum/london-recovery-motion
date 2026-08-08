@@ -79,7 +79,7 @@ export function HeroScene() {
         className="absolute inset-x-0 bottom-[20%] h-[28%] w-full opacity-70 sm:bottom-[22%] sm:h-[34%]"
         style={{ transform: "translate3d(calc(var(--px) * -30px), calc(var(--sy) * -34px), 0)" }}
       >
-        <g stroke="oklch(0.34 0.01 260)" strokeWidth="5" fill="none">
+        <g stroke="oklch(0.55 0.01 260)" strokeWidth="5" fill="none">
           <path d="M120 300V120h44" /><path d="M1080 300V140h-44" />
         </g>
         <circle cx="176" cy="120" r="9" fill="oklch(0.68 0.15 8)" opacity="0.5" />
@@ -90,18 +90,18 @@ export function HeroScene() {
       <svg
         viewBox="0 0 1200 260"
         preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-0 h-[24%] w-full opacity-80 sm:h-[26%]"
+        className="absolute inset-x-0 bottom-0 h-[24%] w-full opacity-60 sm:h-[26%]"
         style={{ transform: "translate3d(calc(var(--px) * -46px), 0, 0) scale(1.12)" }}
 
       >
-        <rect width="1200" height="260" fill="oklch(0.19 0.005 260)" />
-        <line x1="0" y1="18" x2="1200" y2="18" stroke="oklch(1 0 0 / 0.1)" strokeWidth="2" />
+        <rect width="1200" height="260" fill="oklch(0.86 0.004 260)" />
+        <line x1="0" y1="18" x2="1200" y2="18" stroke="oklch(0.20 0.012 350 / 0.14)" strokeWidth="2" />
         <line
           x1="-200"
           y1="150"
           x2="1400"
           y2="150"
-          stroke="oklch(0.9 0.02 90 / 0.5)"
+          stroke="oklch(1 0 0 / 0.85)"
           strokeWidth="8"
           strokeDasharray="60 46"
           className="road-dash"
@@ -111,7 +111,7 @@ export function HeroScene() {
           y1="228"
           x2="1400"
           y2="228"
-          stroke="oklch(0.9 0.02 90 / 0.22)"
+          stroke="oklch(1 0 0 / 0.5)"
           strokeWidth="5"
           strokeDasharray="34 90"
           className="road-dash"
@@ -151,7 +151,7 @@ export function HeroScene() {
         </g>
 
         {/* ground shadow */}
-        <ellipse cx="380" cy="224" rx="310" ry="13" fill="oklch(0 0 0 / 0.5)" />
+        <ellipse cx="380" cy="224" rx="310" ry="13" fill="oklch(0 0 0 / 0.18)" />
 
         {/* chassis rail */}
         <rect x="104" y="168" width="596" height="14" rx="4" fill="oklch(0.17 0.004 260)" />
