@@ -37,7 +37,7 @@ export function HowItWorks() {
             preserveAspectRatio="none"
             className="absolute left-0 top-7 hidden h-10 w-full md:block"
           >
-            <line x1="60" y1="20" x2="940" y2="20" stroke="oklch(1 0 0 / 0.12)" strokeWidth="2" />
+            <line x1="60" y1="20" x2="940" y2="20" stroke="oklch(0.20 0.012 350 / 0.26)" strokeWidth="2" />
             <line
               x1="60"
               y1="20"

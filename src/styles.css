@@ -47,52 +47,53 @@
   --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-lift: 0 24px 60px -24px oklch(0 0 0 / 0.85);
-  --shadow-glow: 0 0 0 1px oklch(0.56 0.16 6 / 0.4), 0 18px 50px -18px oklch(0.56 0.16 6 / 0.5);
+  --shadow-lift: 0 24px 60px -28px oklch(0.20 0.012 350 / 0.28);
+  --shadow-glow: 0 0 0 1px oklch(0.52 0.19 22 / 0.25), 0 18px 50px -22px oklch(0.52 0.19 22 / 0.45);
 }
 
 :root {
   --radius: 0.5rem;
 
-  --background: oklch(0.155 0.008 350);
-  --foreground: oklch(0.975 0.003 350);
+  /* Light theme — white paper with MPG crimson */
+  --background: oklch(0.995 0.002 350);
+  --foreground: oklch(0.20 0.012 350);
 
-  --surface: oklch(0.20 0.009 350);
-  --surface-2: oklch(0.24 0.011 350);
-  --hairline: oklch(1 0 0 / 0.09);
+  --surface: oklch(0.975 0.004 350);
+  --surface-2: oklch(0.95 0.007 350);
+  --hairline: oklch(0.20 0.012 350 / 0.12);
 
-  --card: oklch(0.20 0.009 350);
-  --card-foreground: oklch(0.975 0.003 350);
-  --popover: oklch(0.20 0.009 350);
-  --popover-foreground: oklch(0.975 0.003 350);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.20 0.012 350);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.20 0.012 350);
 
   /* MPG Recovery crimson (from the logo) */
-  --primary: oklch(0.56 0.16 6);
-  --primary-foreground: oklch(0.98 0.005 6);
+  --primary: oklch(0.52 0.19 22);
+  --primary-foreground: oklch(0.99 0.005 22);
 
-  --secondary: oklch(0.24 0.011 350);
-  --secondary-foreground: oklch(0.975 0.003 350);
+  --secondary: oklch(0.95 0.007 350);
+  --secondary-foreground: oklch(0.22 0.012 350);
 
-  --muted: oklch(0.24 0.011 350);
-  --muted-foreground: oklch(0.74 0.012 350);
+  --muted: oklch(0.95 0.007 350);
+  --muted-foreground: oklch(0.46 0.015 350);
 
-  --accent: oklch(0.24 0.011 350);
-  --accent-foreground: oklch(0.975 0.003 350);
+  --accent: oklch(0.95 0.012 22);
+  --accent-foreground: oklch(0.30 0.10 22);
 
-  --destructive: oklch(0.62 0.21 27);
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.58 0.21 27);
+  --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(1 0 0 / 0.1);
-  --input: oklch(1 0 0 / 0.14);
-  --ring: oklch(0.56 0.16 6);
+  --border: oklch(0.20 0.012 350 / 0.13);
+  --input: oklch(0.20 0.012 350 / 0.20);
+  --ring: oklch(0.52 0.19 22);
 
-  --whatsapp: oklch(0.72 0.17 152);
-  --whatsapp-foreground: oklch(0.15 0.03 152);
-  --signal: oklch(0.68 0.15 8);
+  --whatsapp: oklch(0.62 0.16 152);
+  --whatsapp-foreground: oklch(0.99 0.01 152);
+  --signal: oklch(0.55 0.19 22);
 }
 
-.dark {
-  color-scheme: dark;
+html {
+  color-scheme: light;
 }
 
 @layer base {
@@ -136,7 +137,7 @@
 /* ---------------------------------------------------------------- utilities */
 
 @utility surface-panel {
-  background: color-mix(in oklab, var(--surface) 82%, transparent);
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
   border: 1px solid var(--hairline);
   backdrop-filter: blur(14px);
 }
@@ -152,8 +153,8 @@
 
 @utility grid-lines {
   background-image:
-    linear-gradient(to right, oklch(1 0 0 / 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(1 0 0 / 0.035) 1px, transparent 1px);
+    linear-gradient(to right, oklch(0.20 0.012 350 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.20 0.012 350 / 0.05) 1px, transparent 1px);
   background-size: 72px 72px;
 }
 
@@ -198,10 +199,10 @@
   0%,
   92%,
   100% {
-    box-shadow: 0 0 0 0 oklch(0.72 0.17 152 / 0);
+    box-shadow: 0 0 0 0 oklch(0.62 0.16 152 / 0);
   }
   95% {
-    box-shadow: 0 0 0 10px oklch(0.72 0.17 152 / 0.18);
+    box-shadow: 0 0 0 10px oklch(0.62 0.16 152 / 0.22);
   }
 }
 
@@ -226,7 +227,7 @@
 }
 
 @utility road-dash-x {
-  background-image: linear-gradient(90deg, oklch(1 0 0 / 0.5) 0 18px, transparent 18px 48px);
+  background-image: linear-gradient(90deg, oklch(0.20 0.012 350 / 0.45) 0 18px, transparent 18px 48px);
   background-size: 48px 100%;
   animation: hud-dash 1.1s linear infinite;
 }

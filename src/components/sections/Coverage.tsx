@@ -105,9 +105,9 @@ export function Coverage() {
             role="img"
             aria-label="Stylised diagram of London showing the five broad areas MPG Recovery covers"
           >
-            <circle cx="200" cy="200" r="150" fill="none" stroke="oklch(1 0 0 / 0.08)" strokeWidth="1.5" />
-            <circle cx="200" cy="200" r="98" fill="none" stroke="oklch(1 0 0 / 0.1)" strokeWidth="1.5" />
-            <circle cx="200" cy="200" r="52" fill="none" stroke="oklch(1 0 0 / 0.14)" strokeWidth="1.5" />
+            <circle cx="200" cy="200" r="150" fill="none" stroke="oklch(0.20 0.012 350 / 0.18)" strokeWidth="1.5" />
+            <circle cx="200" cy="200" r="98" fill="none" stroke="oklch(0.20 0.012 350 / 0.22)" strokeWidth="1.5" />
+            <circle cx="200" cy="200" r="52" fill="none" stroke="oklch(0.20 0.012 350 / 0.31)" strokeWidth="1.5" />
             {/* Thames */}
             <path
               d="M20 250 C 90 230, 130 285, 200 268 S 320 225, 385 252"
@@ -117,7 +117,7 @@ export function Coverage() {
               strokeLinecap="round"
             />
             {/* radial roads */}
-            <g stroke="oklch(1 0 0 / 0.07)" strokeWidth="1.5">
+            <g stroke="oklch(0.20 0.012 350 / 0.15)" strokeWidth="1.5">
               <line x1="200" y1="30" x2="200" y2="370" />
               <line x1="30" y1="200" x2="370" y2="200" />
               <line x1="70" y1="70" x2="330" y2="330" />

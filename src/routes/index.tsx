@@ -45,7 +45,7 @@ function Home() {
           height={1104}
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-0 size-full object-cover opacity-35"
+          className="absolute inset-0 size-full object-cover opacity-20"
         />
         <div
           className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,transparent,var(--background)_78%)]"

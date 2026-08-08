@@ -89,7 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#141518" },
+      { name: "theme-color", content: "#ffffff" },
       { name: "author", content: siteConfig.legalName },
       { name: "publisher", content: siteConfig.legalName },
       { name: "application-name", content: siteConfig.name },
@@ -137,7 +137,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en-GB" className="dark">
+    <html lang="en-GB">
       <head>
         <HeadContent />
       </head>
