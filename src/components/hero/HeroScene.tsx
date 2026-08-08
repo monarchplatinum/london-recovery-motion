@@ -82,8 +82,8 @@ export function HeroScene() {
         <g stroke="oklch(0.34 0.01 260)" strokeWidth="5" fill="none">
           <path d="M120 300V120h44" /><path d="M1080 300V140h-44" />
         </g>
-        <circle cx="176" cy="120" r="9" fill="oklch(0.85 0.15 90)" opacity="0.5" />
-        <circle cx="1028" cy="140" r="9" fill="oklch(0.85 0.15 90)" opacity="0.5" />
+        <circle cx="176" cy="120" r="9" fill="oklch(0.68 0.15 8)" opacity="0.5" />
+        <circle cx="1028" cy="140" r="9" fill="oklch(0.68 0.15 8)" opacity="0.5" />
       </svg>
 
       {/* Depth layer 3 — road surface + markings */}
@@ -182,7 +182,7 @@ export function HeroScene() {
           <circle cx="556" cy="136" r="16" fill="oklch(0.12 0 0)" stroke="oklch(1 0 0 / 0.18)" strokeWidth="2" />
           <circle className="scene-wheel" cx="556" cy="136" r="6" fill="oklch(0.36 0.005 260)" />
           {/* securing straps */}
-          <g stroke="oklch(0.85 0.15 90 / 0.45)" strokeWidth="3">
+          <g stroke="oklch(0.68 0.15 8 / 0.45)" strokeWidth="3">
             <path d="M338 152V114" />
             <path d="M590 152V116" />
           </g>
@@ -208,7 +208,7 @@ export function HeroScene() {
         <rect x="92" y="130" width="14" height="6" rx="2" fill="oklch(0.24 0.006 260)" />
 
         {/* beacons */}
-        <g fill="oklch(0.85 0.15 90)">
+        <g fill="oklch(0.68 0.15 8)">
           <rect className="scene-beacon" x="128" y="56" width="18" height="8" rx="4" />
           <rect className="scene-beacon-2" x="168" y="56" width="18" height="8" rx="4" />
         </g>
