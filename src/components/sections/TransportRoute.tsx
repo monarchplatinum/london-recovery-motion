@@ -58,7 +58,7 @@ export function TransportRoute() {
               aria-hidden="true"
               className="hidden h-5 flex-[2] sm:block"
             >
-              <line x1="0" y1="10" x2="200" y2="10" stroke="oklch(1 0 0 / 0.14)" strokeWidth="2" />
+              <line x1="0" y1="10" x2="200" y2="10" stroke="oklch(0.20 0.012 350 / 0.31)" strokeWidth="2" />
               <line
                 x1="0"
                 y1="10"
