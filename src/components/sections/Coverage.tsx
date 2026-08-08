@@ -152,7 +152,7 @@ export function Coverage() {
               cx={(areaPos[active].x / 100) * 400}
               cy={(areaPos[active].y / 100) * 400}
               r="26"
-              fill="oklch(0.78 0.17 64 / 0.16)"
+              fill="oklch(0.56 0.16 6 / 0.20)"
               className="transition-all duration-500"
             />
 

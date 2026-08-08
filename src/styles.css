@@ -48,47 +48,47 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --shadow-lift: 0 24px 60px -24px oklch(0 0 0 / 0.85);
-  --shadow-glow: 0 0 0 1px oklch(0.78 0.17 64 / 0.35), 0 18px 50px -18px oklch(0.78 0.17 64 / 0.45);
+  --shadow-glow: 0 0 0 1px oklch(0.56 0.16 6 / 0.4), 0 18px 50px -18px oklch(0.56 0.16 6 / 0.5);
 }
 
 :root {
   --radius: 0.5rem;
 
-  --background: oklch(0.16 0.006 260);
-  --foreground: oklch(0.975 0.002 260);
+  --background: oklch(0.155 0.008 350);
+  --foreground: oklch(0.975 0.003 350);
 
-  --surface: oklch(0.205 0.007 260);
-  --surface-2: oklch(0.245 0.008 260);
+  --surface: oklch(0.20 0.009 350);
+  --surface-2: oklch(0.24 0.011 350);
   --hairline: oklch(1 0 0 / 0.09);
 
-  --card: oklch(0.205 0.007 260);
-  --card-foreground: oklch(0.975 0.002 260);
-  --popover: oklch(0.205 0.007 260);
-  --popover-foreground: oklch(0.975 0.002 260);
+  --card: oklch(0.20 0.009 350);
+  --card-foreground: oklch(0.975 0.003 350);
+  --popover: oklch(0.20 0.009 350);
+  --popover-foreground: oklch(0.975 0.003 350);
 
-  /* High-visibility recovery amber */
-  --primary: oklch(0.78 0.17 64);
-  --primary-foreground: oklch(0.16 0.03 60);
+  /* MPG Recovery crimson (from the logo) */
+  --primary: oklch(0.56 0.16 6);
+  --primary-foreground: oklch(0.98 0.005 6);
 
-  --secondary: oklch(0.245 0.008 260);
-  --secondary-foreground: oklch(0.975 0.002 260);
+  --secondary: oklch(0.24 0.011 350);
+  --secondary-foreground: oklch(0.975 0.003 350);
 
-  --muted: oklch(0.245 0.008 260);
-  --muted-foreground: oklch(0.74 0.01 260);
+  --muted: oklch(0.24 0.011 350);
+  --muted-foreground: oklch(0.74 0.012 350);
 
-  --accent: oklch(0.245 0.008 260);
-  --accent-foreground: oklch(0.975 0.002 260);
+  --accent: oklch(0.24 0.011 350);
+  --accent-foreground: oklch(0.975 0.003 350);
 
   --destructive: oklch(0.62 0.21 27);
   --destructive-foreground: oklch(0.98 0 0);
 
   --border: oklch(1 0 0 / 0.1);
   --input: oklch(1 0 0 / 0.14);
-  --ring: oklch(0.78 0.17 64);
+  --ring: oklch(0.56 0.16 6);
 
   --whatsapp: oklch(0.72 0.17 152);
   --whatsapp-foreground: oklch(0.15 0.03 152);
-  --signal: oklch(0.85 0.15 90);
+  --signal: oklch(0.68 0.15 8);
 }
 
 .dark {
