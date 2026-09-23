@@ -38,6 +38,36 @@ export function PageHero({
   );
 }
 
+/** A single photo inside a Prose section, with its caption. */
+export function InlineFigure({
+  src,
+  alt,
+  caption,
+  width,
+  height,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+}) {
+  return (
+    <figure className="mt-6 overflow-hidden rounded-xl border border-border bg-surface/60">
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading="lazy"
+        decoding="async"
+        className="aspect-16/10 w-full object-cover"
+      />
+      <figcaption className="px-4 py-3 text-sm text-muted-foreground">{caption}</figcaption>
+    </figure>
+  );
+}
+
 export function Prose({ children }: { children: ReactNode }) {
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">

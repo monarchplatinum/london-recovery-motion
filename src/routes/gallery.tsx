@@ -4,7 +4,7 @@ import { PageHero } from "@/components/layout/PageParts";
 import { ContextualCta } from "@/components/cta/Cta";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
-import { galleryImages } from "@/content/gallery";
+import { galleryImages, jobImages, allImages, type GalleryImage } from "@/content/gallery";
 import { siteConfig, absoluteUrl, waMessages } from "@/config/site";
 
 const path = "/gallery";
@@ -20,7 +20,7 @@ function imageGallerySchema() {
     description,
     url: absoluteUrl(path),
     publisher: { "@id": absoluteUrl("/#business") },
-    image: galleryImages.map((image) => ({
+    image: allImages.map((image) => ({
       "@type": "ImageObject",
       contentUrl: absoluteUrl(image.src),
       caption: image.caption,
@@ -46,6 +46,30 @@ export const Route = createFileRoute("/gallery")({
   component: Page,
 });
 
+function Grid({ images }: { images: GalleryImage[] }) {
+  return (
+    <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {images.map((image) => (
+        <li
+          key={image.src}
+          className="overflow-hidden rounded-xl border border-border bg-surface/60"
+        >
+          <img
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            loading="lazy"
+            decoding="async"
+            className="aspect-4/3 w-full object-cover"
+          />
+          <p className="px-4 py-3 text-sm text-muted-foreground">{image.caption}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function Page() {
   return (
     <>
@@ -62,25 +86,19 @@ function Page() {
         aria-label="Photographs of MPG Recovery"
         className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14"
       >
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {galleryImages.map((image) => (
-            <li
-              key={image.src}
-              className="overflow-hidden rounded-xl border border-border bg-surface/60"
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-                loading="lazy"
-                decoding="async"
-                className="aspect-4/3 w-full object-cover"
-              />
-              <p className="px-4 py-3 text-sm text-muted-foreground">{image.caption}</p>
-            </li>
-          ))}
-        </ul>
+        <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
+          The truck and the base
+        </h2>
+        <Grid images={galleryImages} />
+
+        <h2 className="mt-12 font-display text-2xl font-extrabold sm:text-3xl">
+          Jobs we have been out on
+        </h2>
+        <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
+          Stills from our own footage: auction collections, accident damage and night
+          callouts across London.
+        </p>
+        <Grid images={jobImages} />
 
         <p className="mt-8 max-w-3xl text-sm text-muted-foreground">
           Customer number plates in these photographs are blurred. If you need a vehicle

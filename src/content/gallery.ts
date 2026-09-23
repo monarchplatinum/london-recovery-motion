@@ -7,6 +7,17 @@ import vanDoorway from "@/assets/gallery/mpg-recovery-van-arch-doorway.jpg";
 import vanOutside from "@/assets/gallery/mpg-recovery-van-outside-arch-90.jpg";
 import vanInside from "@/assets/gallery/mpg-recovery-van-inside-the-arch.jpg";
 
+import accidentNight from "@/assets/jobs/mpg-recovery-accident-damaged-car-night.jpg";
+import damagedMercedes from "@/assets/jobs/mpg-recovery-damaged-mercedes-loading.jpg";
+import nightCarPark from "@/assets/jobs/mpg-recovery-night-collection-car-park.jpg";
+import nightCanary from "@/assets/jobs/mpg-recovery-night-recovery-canary-wharf.jpg";
+import copart from "@/assets/jobs/mpg-recovery-auction-collection-copart.jpg";
+import bca from "@/assets/jobs/mpg-recovery-auction-collection-bca.jpg";
+import mini from "@/assets/jobs/mpg-recovery-mini-loaded-for-transport.jpg";
+import retailPark from "@/assets/jobs/mpg-recovery-car-loaded-retail-park.jpg";
+import bedLowered from "@/assets/jobs/mpg-recovery-tilt-and-slide-bed-lowered.jpg";
+import strapDetail from "@/assets/jobs/mpg-recovery-wheel-strap-detail.jpg";
+
 export type GalleryImage = {
   src: string;
   width: number;
@@ -80,3 +91,85 @@ export const galleryImages: GalleryImage[] = [
     caption: "Vehicles kept inside the arch",
   },
 ];
+
+/**
+ * Stills pulled from the owner's own job videos. Lower resolution (576px
+ * wide, WhatsApp compressed) so they are used at card size, never as heroes.
+ * Location captions burned in by the camera app are cropped off and customer
+ * number plates are blurred.
+ */
+export const jobImages: GalleryImage[] = [
+  {
+    src: accidentNight,
+    width: 576,
+    height: 778,
+    alt: "An accident-damaged car winched onto the MPG Recovery bed at night in East London",
+    caption: "Accident damage cleared at night",
+  },
+  {
+    src: damagedMercedes,
+    width: 576,
+    height: 778,
+    alt: "A damaged Mercedes being winched onto the MPG Recovery flatbed",
+    caption: "Winching a damaged car on",
+  },
+  {
+    src: nightCarPark,
+    width: 576,
+    height: 778,
+    alt: "A vehicle collected from a multi-storey car park at night by MPG Recovery",
+    caption: "A night collection from a car park",
+  },
+  {
+    src: nightCanary,
+    width: 576,
+    height: 778,
+    alt: "A car on the MPG Recovery bed at night beside the towers at Canary Wharf",
+    caption: "Working through the night at Canary Wharf",
+  },
+  {
+    src: copart,
+    width: 576,
+    height: 778,
+    alt: "A car collected from a Copart auction site on the MPG Recovery transporter",
+    caption: "Collected from a Copart auction",
+  },
+  {
+    src: bca,
+    width: 576,
+    height: 778,
+    alt: "A car loaded at a BCA auction site ready for delivery by MPG Recovery",
+    caption: "A BCA auction collection",
+  },
+  {
+    src: mini,
+    width: 576,
+    height: 778,
+    alt: "A Mini strapped down on the MPG Recovery flatbed in daylight",
+    caption: "Loaded and strapped for transport",
+  },
+  {
+    src: retailPark,
+    width: 576,
+    height: 778,
+    alt: "A car secured on the MPG Recovery bed at a London retail park",
+    caption: "Collected from a retail park",
+  },
+  {
+    src: bedLowered,
+    width: 576,
+    height: 778,
+    alt: "The MPG Recovery tilt-and-slide bed lowered to the road ready to load",
+    caption: "The tilt-and-slide bed, lowered to load",
+  },
+  {
+    src: strapDetail,
+    width: 576,
+    height: 778,
+    alt: "A wheel strap ratcheted over the tyre of a car on the MPG Recovery bed",
+    caption: "Strapped by the wheels, not the bodywork",
+  },
+];
+
+/** Everything, for the gallery page. */
+export const allImages: GalleryImage[] = [...galleryImages, ...jobImages];

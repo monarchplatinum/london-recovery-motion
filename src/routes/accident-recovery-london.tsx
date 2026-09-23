@@ -1,6 +1,7 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PageHero, Prose } from "@/components/layout/PageParts";
+import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
+import accidentImg from "@/assets/jobs/mpg-recovery-accident-damaged-car-night.jpg";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -62,6 +63,14 @@ function Page() {
       />
 
       <Prose>
+        <InlineFigure
+          src={accidentImg}
+          alt="An accident-damaged car winched onto the MPG Recovery bed at night in East London"
+          caption="Accident damage cleared at night in East London. The vehicle is winched on, so nothing has to be driven."
+          width={576}
+          height={778}
+        />
+
         <section>
           <h2>Safety comes first</h2>
           <p>

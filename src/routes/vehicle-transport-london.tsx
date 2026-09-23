@@ -1,6 +1,7 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PageHero, Prose } from "@/components/layout/PageParts";
+import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
+import auctionImg from "@/assets/jobs/mpg-recovery-auction-collection-bca.jpg";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -65,6 +66,14 @@ function Page() {
       <TransportRoute />
 
       <Prose>
+        <InlineFigure
+          src={auctionImg}
+          alt="A car loaded at a BCA auction site ready for delivery by MPG Recovery"
+          caption="An auction collection loaded and strapped, ready for delivery."
+          width={576}
+          height={778}
+        />
+
         <section>
           <h2>Vehicle collection and delivery</h2>
           <p>

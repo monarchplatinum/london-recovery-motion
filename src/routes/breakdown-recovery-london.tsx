@@ -1,6 +1,7 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PageHero, Prose } from "@/components/layout/PageParts";
+import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
+import nightImg from "@/assets/jobs/mpg-recovery-night-collection-car-park.jpg";
 import { WhatsAppCta, CallCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -85,6 +86,14 @@ function Page() {
       </section>
 
       <Prose>
+        <InlineFigure
+          src={nightImg}
+          alt="A vehicle collected from a multi-storey car park at night by MPG Recovery"
+          caption="A night collection from a London car park. We answer the phone around the clock."
+          width={576}
+          height={778}
+        />
+
         <section>
           <h2>What counts as a breakdown job</h2>
           <p>

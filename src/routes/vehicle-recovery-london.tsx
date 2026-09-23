@@ -1,6 +1,7 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PageHero, Prose } from "@/components/layout/PageParts";
+import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
+import bedImg from "@/assets/jobs/mpg-recovery-tilt-and-slide-bed-lowered.jpg";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -64,6 +65,14 @@ function Page() {
       />
 
       <Prose>
+        <InlineFigure
+          src={bedImg}
+          alt="The MPG Recovery tilt-and-slide bed lowered to the road ready to load"
+          caption="The tilt-and-slide bed lowered to the road. A car that will not roll or steer is winched straight on."
+          width={576}
+          height={778}
+        />
+
         <section>
           <h2>Non-running vehicles</h2>
           <p>
