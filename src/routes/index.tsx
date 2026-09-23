@@ -13,6 +13,7 @@ import { WhyChoose, TransportSection, Scenarios } from "@/components/sections/Ho
 import { GalleryStrip } from "@/components/sections/GalleryStrip";
 import { Reviews } from "@/components/sections/Reviews";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { EnquiryForm } from "@/components/contact/EnquiryForm";
 import { FaqList, faqSchema } from "@/components/sections/Faq";
 import { homeFaqs } from "@/content/faqs";
 import { waMessages } from "@/config/site";
@@ -35,6 +36,32 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
+
+function QuoteForm() {
+  return (
+    <section
+      aria-labelledby="quote-heading"
+      className="border-y border-border bg-surface/30"
+    >
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-20">
+        <p className="text-eyebrow">Free quote</p>
+        <h2
+          id="quote-heading"
+          className="mt-3 text-balance font-display text-[1.8rem] font-extrabold sm:text-4xl"
+        >
+          Tell Us About the Job
+        </h2>
+        <p className="mt-4 text-muted-foreground">
+          Fill this in and it opens WhatsApp with your details already written out, so
+          nothing gets retyped. Quotes are free and we answer around the clock.
+        </p>
+        <div className="mt-8">
+          <EnquiryForm />
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function Home() {
   return (
@@ -90,11 +117,13 @@ function Home() {
 
       <QuickAssist />
 
-      <Reviews />
-
       <div className="sr-only">
         <h2>Vehicle Recovery &amp; Transport in London</h2>
       </div>
+
+      <WhyChoose />
+
+      <Reviews />
 
       <RoadDivider />
       <Services />
@@ -108,9 +137,9 @@ function Home() {
         />
       </div>
 
-      <HowItWorks />
-      <Coverage />
-      <RoadDivider reverse />
+      <QuoteForm />
+
+      <TransportSection />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <ContextualCta
@@ -121,10 +150,11 @@ function Home() {
         />
       </div>
 
-      <WhyChoose />
-      <TransportSection />
+      <HowItWorks />
       <Scenarios />
       <GalleryStrip />
+      <RoadDivider reverse />
+      <Coverage />
 
       <section id="faq" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">FAQ</p>

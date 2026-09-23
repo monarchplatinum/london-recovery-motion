@@ -8,10 +8,10 @@ import { siteConfig } from "@/config/site";
 import { trackConversion } from "@/lib/analytics";
 
 const nav = [
+  { to: "/services", label: "Services" },
   { to: "/vehicle-recovery-london", label: "Vehicle Recovery" },
   { to: "/vehicle-transport-london", label: "Vehicle Transport" },
   { to: "/breakdown-recovery-london", label: "Breakdown" },
-  { to: "/accident-recovery-london", label: "Accident" },
   { to: "/areas-we-cover", label: "Areas We Cover" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },

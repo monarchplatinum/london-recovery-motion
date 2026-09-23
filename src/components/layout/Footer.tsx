@@ -49,6 +49,7 @@ export function Footer() {
             Services
           </h2>
           <ul className="mt-4 space-y-2.5 text-sm">
+            <li><Link to="/services" className="text-foreground/85 hover:text-primary">All Services</Link></li>
             <li><Link to="/vehicle-recovery-london" className="text-foreground/85 hover:text-primary">Vehicle Recovery London</Link></li>
             <li><Link to="/vehicle-transport-london" className="text-foreground/85 hover:text-primary">Vehicle Transport London</Link></li>
             <li><Link to="/breakdown-recovery-london" className="text-foreground/85 hover:text-primary">Breakdown Recovery London</Link></li>

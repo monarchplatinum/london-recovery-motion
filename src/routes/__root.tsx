@@ -37,6 +37,12 @@ function NotFoundComponent() {
             Go home
           </Link>
           <Link
+            to="/services"
+            className="inline-flex min-h-11 items-center justify-center rounded-lg border border-border px-5 py-3 font-display text-sm font-bold uppercase"
+          >
+            All services
+          </Link>
+          <Link
             to="/contact"
             className="inline-flex min-h-11 items-center justify-center rounded-lg border border-border px-5 py-3 font-display text-sm font-bold uppercase"
           >
