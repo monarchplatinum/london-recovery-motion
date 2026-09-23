@@ -11,6 +11,7 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Coverage } from "@/components/sections/Coverage";
 import { WhyChoose, TransportSection, Scenarios } from "@/components/sections/HomeBlocks";
 import { GalleryStrip } from "@/components/sections/GalleryStrip";
+import { Reviews } from "@/components/sections/Reviews";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FaqList, faqSchema } from "@/components/sections/Faq";
 import { homeFaqs } from "@/content/faqs";
@@ -88,6 +89,8 @@ function Home() {
       </section>
 
       <QuickAssist />
+
+      <Reviews />
 
       <div className="sr-only">
         <h2>Vehicle Recovery &amp; Transport in London</h2>

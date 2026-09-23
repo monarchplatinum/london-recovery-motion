@@ -55,6 +55,7 @@ export function Footer() {
             <li><Link to="/accident-recovery-london" className="text-foreground/85 hover:text-primary">Accident Recovery London</Link></li>
             <li><Link to="/areas-we-cover" className="text-foreground/85 hover:text-primary">Areas We Cover</Link></li>
             <li><Link to="/gallery" className="text-foreground/85 hover:text-primary">Gallery</Link></li>
+            <li><Link to="/reviews" className="text-foreground/85 hover:text-primary">Reviews</Link></li>
           </ul>
         </nav>
 

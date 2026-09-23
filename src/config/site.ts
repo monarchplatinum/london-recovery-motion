@@ -38,14 +38,15 @@ export const siteConfig = {
    */
   addressIsPublicPremises: false,
 
-  /** TODO: owner to confirm real availability hours before publishing. */
-  openingHours: "" as string,
+  /** 24/7, as set by the owner on the Google Business Profile (2026-09-23). */
+  openingHours: "Mo-Su 00:00-24:00" as string,
 
   // --- Google ---------------------------------------------------------------
   // Do not fabricate these. Populate once the real profile exists.
-  GOOGLE_BUSINESS_PROFILE_URL: "",
-  GOOGLE_REVIEW_URL: "",
-  GOOGLE_MAPS_URL: "",
+  GOOGLE_BUSINESS_PROFILE_URL: "https://www.google.com/maps?cid=821874001268007147",
+  GOOGLE_REVIEW_URL:
+    "https://search.google.com/local/writereview?placeid=ChIJo3rO2mAddkgR62C1twziZws",
+  GOOGLE_MAPS_URL: "https://www.google.com/maps?cid=821874001268007147",
 
   // --- Social ----------------------------------------------------------------
   // Only add URLs for profiles that genuinely exist; used for schema `sameAs`.
