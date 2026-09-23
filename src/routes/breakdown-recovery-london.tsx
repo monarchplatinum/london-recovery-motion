@@ -16,6 +16,18 @@ const description =
 
 const faqs: FaqItem[] = [
   {
+    q: "How fast can you get to a breakdown?",
+    a: "We answer at any hour, usually straight away. From the E1 base we are typically with you in 5 to 15 minutes across East London; further out it depends on traffic and distance. You will be given a realistic time before anything is agreed.",
+  },
+  {
+    q: "Can you jump start it instead of recovering it?",
+    a: "Where the problem is something that can be dealt with at the roadside, we will try. If it starts and runs properly, that may be the end of it. If it does not, the same truck recovers the vehicle, so you are not waiting on a second callout.",
+  },
+  {
+    q: "What if I broke down at 3am?",
+    a: "Ring anyway. MPG Recovery is on call 24 hours a day, seven days a week, including nights, weekends and bank holidays.",
+  },
+  {
     q: "What should I do first if I break down?",
     a: "Get yourself and any passengers somewhere safe, away from live traffic. If anyone is at risk, or you have stopped on a motorway or a fast dual carriageway, contact the emergency services first. Then message us with your location.",
   },
@@ -86,10 +98,36 @@ function Page() {
       </section>
 
       <Prose>
+        <section>
+          <p>
+            Breaking down is bad enough. Breaking down in London, in a live lane or a bay
+            you cannot stay in, with traffic going past a foot from the door, is worse.
+            Get yourself somewhere safe first. Then message or ring us: MPG Recovery is on
+            call 24 hours a day, and the phone is answered by someone who can tell you
+            straight away what happens next.
+          </p>
+        </section>
+
+        <section>
+          <h2>Get safe first</h2>
+          <p>
+            If you are on a fast road, get out on the side away from traffic and stand well
+            back from the vehicle, behind a barrier where there is one. If anybody is hurt,
+            or the vehicle is in a position that puts other people at risk, call the
+            emergency services before you call us. A car can be replaced.
+          </p>
+          <p>
+            Once you are clear, send us a location. A WhatsApp location pin is the most
+            reliable thing you can give us, especially at night or on a stretch of road
+            with nothing obvious to name. A Google Maps link or the nearest junction number
+            works too.
+          </p>
+        </section>
+
         <InlineFigure
           src={nightImg}
           alt="A vehicle collected from a multi-storey car park at night by MPG Recovery"
-          caption="A night collection from a London car park. We answer the phone around the clock."
+          caption="A night collection in London. The phone is answered around the clock."
           width={576}
           height={778}
         />
@@ -97,52 +135,113 @@ function Page() {
         <section>
           <h2>What counts as a breakdown job</h2>
           <p>
-            Anything that has left a vehicle where it should not be: a car that won&rsquo;t
-            crank, a van that lost drive, an EV that stopped charging, a clutch that has
-            gone, a gearbox stuck in gear. If it cannot be driven safely, it travels on the
-            truck.
+            Anything that has stopped the vehicle being driven safely. A car that turns over
+            but will not fire. A battery flat enough that the dash lights die when you try.
+            A clutch that has finally let go, a snapped belt, a gearbox that will not select,
+            overheating that has pushed the temperature gauge into the red, or a warning
+            light the handbook tells you to stop driving on.
+          </p>
+          <p>
+            Also the ones people hesitate to call about: a flat tyre with no usable spare, a
+            wheel that will not turn, keys locked somewhere unhelpful, or a car that started
+            fine this morning and now will not do anything at all. If you are unsure whether
+            it is worth a callout, describe it and we will tell you honestly.
           </p>
         </section>
 
         <section>
-          <h2>Sending your location accurately</h2>
+          <h2>Roadside first, recovery if not</h2>
           <p>
-            London street names repeat across boroughs, so a name alone is rarely enough.
-            The most reliable options, in order: a WhatsApp location pin, a Google Maps
-            link, a full postcode, then a street name plus a nearby landmark. If you are in
-            an underground car park, tell us the level and the height restriction.
+            Not every breakdown needs a truck. Where the fault is something we can deal with
+            where you are — a jump start being the common one — we will try that first, and
+            you may be driving away rather than waiting on a flatbed.
+          </p>
+          <p>
+            When it cannot be fixed at the roadside, the same truck recovers the vehicle, so
+            there is no second wait and no second charge for turning up. It goes onto the bed
+            on a winch if it will not roll or steer, and it is strapped by the wheels. Full
+            detail of how that works is on the{" "}
+            <Link to="/vehicle-recovery-london" className="text-primary hover:underline">
+              vehicle recovery page
+            </Link>
+            .
+          </p>
+        </section>
+
+        <section>
+          <h2>Breaking down on London roads</h2>
+          <p>
+            London adds its own complications. Red routes where stopping is an offence in
+            itself, bus lanes under camera enforcement, box junctions, and the North
+            Circular and A13 where there is nowhere sensible to stand. Multi-storey and
+            underground car parks bring height limits a full-size truck cannot clear, so the
+            vehicle has to be brought up to street level before it can be loaded.
+          </p>
+          <p>
+            Our base is in the E1 arches, so{" "}
+            <Link to="/vehicle-recovery-east-london" className="text-primary hover:underline">
+              East London
+            </Link>{" "}
+            is the ground we cover most often, but breakdown work runs across{" "}
+            <Link to="/areas-we-cover" className="text-primary hover:underline">
+              the whole of London
+            </Link>{" "}
+            and the surrounding areas.
           </p>
         </section>
 
         <section>
           <h2>Details that speed things up</h2>
           <ul>
-            <li>Make, model and rough age of the vehicle</li>
-            <li>Whether it rolls freely and whether the steering unlocks</li>
-            <li>Whether the keys are with you</li>
-            <li>Whether it is on a red route, in a bay, or on private land</li>
-            <li>Where you want it taken</li>
+            <li>Your exact location — a pin, a link, or the road and nearest junction</li>
+            <li>Vehicle make, model and colour</li>
+            <li>What happened, and whether it still turns over</li>
+            <li>Whether it rolls and steers</li>
+            <li>Whether you have the keys</li>
+            <li>Where it needs to go afterwards</li>
+            <li>A photo of how and where it is parked</li>
           </ul>
         </section>
 
         <section>
           <h2>Where the vehicle goes next</h2>
           <p>
-            Most breakdowns end at a garage or at home. If you don&rsquo;t yet know, that
-            is fine — say so, and we can talk it through. Related:{" "}
-            <Link to="/vehicle-recovery-london" className="text-primary hover:underline">
-              vehicle recovery in London
+            That is your call. Most go to a garage, which is worth ringing first so you know
+            they can take it and when they are open. Others go home, to a storage yard, or
+            to a bodyshop. If the garage is closed until Monday and the car cannot stay where
+            it is, say so and we will talk through the options.
+          </p>
+        </section>
+
+        <section>
+          <h2>What it costs</h2>
+          <p>
+            Price depends on where you are, where the vehicle is going, the time of day, and
+            how awkward it is to load. Quotes are free and the price is agreed before we set
+            off. There is no separate callout charge on a job we carry out; a callout fee
+            only applies if we have travelled to you and the vehicle then does not need
+            moving.
+          </p>
+        </section>
+
+        <section>
+          <h2>Why people call us</h2>
+          <p>
+            We answer day and night, we tell you a realistic arrival time rather than the one
+            you want to hear, and we are rated{" "}
+            <Link to="/reviews" className="text-primary hover:underline">
+              5.0 on Google from 19 reviews
+            </Link>
+            . Several of those were written by people we picked up at the roadside, including
+            one at 4am on the way back from a long drive. For everything else we handle, see{" "}
+            <Link to="/services" className="text-primary hover:underline">
+              our services
             </Link>{" "}
-            and{" "}
-            <Link to="/vehicle-transport-london" className="text-primary hover:underline">
-              vehicle transport in London
+            or start at{" "}
+            <Link to="/" className="text-primary hover:underline">
+              vehicle recovery and transport in London
             </Link>
             .
-          </p>
-          <p>
-            We don&rsquo;t publish arrival times, because London traffic makes any promise
-            of that kind unreliable. Message or call and we&rsquo;ll tell you honestly
-            what we can do.
           </p>
         </section>
 
