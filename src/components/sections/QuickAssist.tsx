@@ -15,12 +15,14 @@ const items = [
   { icon: Truck, label: "Tilt-and-slide and winch" },
 ];
 
+/**
+ * Chips rather than bare text: the hero art sits behind this, and plain
+ * labels disappeared into it. Each chip carries its own opaque background.
+ */
 export function TrustStrip({ compact = false }: { compact?: boolean }) {
   return (
     <ul
-      className={`grid grid-cols-2 gap-x-4 gap-y-2.5 sm:flex sm:flex-wrap sm:gap-x-5 sm:gap-y-3 ${
-        compact ? "text-[0.7rem]" : "text-[0.68rem] sm:text-xs"
-      }`}
+      className={`flex flex-wrap gap-2 ${compact ? "text-[0.7rem]" : "text-[0.68rem] sm:text-xs"}`}
       aria-label="Service indicators"
     >
       {items.map((item) => {
@@ -28,10 +30,10 @@ export function TrustStrip({ compact = false }: { compact?: boolean }) {
         return (
           <li
             key={item.label}
-            className="inline-flex min-w-0 items-center gap-2 font-display font-bold uppercase tracking-[0.1em] text-muted-foreground sm:tracking-[0.14em]"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-background/95 px-3 py-1.5 font-display font-bold uppercase tracking-[0.1em] text-foreground shadow-sm backdrop-blur-sm sm:tracking-[0.12em]"
           >
             <Icon className="size-4 shrink-0 text-primary" aria-hidden="true" />
-            <span className="truncate">{item.label}</span>
+            {item.label}
           </li>
         );
       })}
