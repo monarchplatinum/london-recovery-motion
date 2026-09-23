@@ -19,14 +19,26 @@ export function Stars({ count = 5, className = "" }: { count?: number; className
   );
 }
 
-export function ReviewCard({ review }: { review: Review }) {
+/**
+ * One review. Long reviews are clamped so a single wordy customer can't
+ * stretch a whole row; the full text is a click away on Google.
+ */
+export function ReviewCard({ review, clamp = 6 }: { review: Review; clamp?: number }) {
   return (
-    <figure className="flex h-full flex-col rounded-xl border border-border bg-surface/60 p-5 sm:p-6">
+    <figure className="rounded-xl border border-border bg-surface/60 p-4 sm:p-5">
       <Stars />
-      <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+      <blockquote
+        className="mt-2.5 text-[0.9rem] leading-relaxed text-muted-foreground"
+        style={{
+          display: "-webkit-box",
+          WebkitBoxOrient: "vertical",
+          WebkitLineClamp: clamp,
+          overflow: "hidden",
+        }}
+      >
         {review.text}
       </blockquote>
-      <figcaption className="mt-4 text-sm">
+      <figcaption className="mt-3 text-xs">
         <span className="font-display font-bold text-foreground">{review.author}</span>
         <span className="text-muted-foreground">
           {" "}
@@ -52,11 +64,12 @@ export function ReviewSummary({ className = "" }: { className?: string }) {
   );
 }
 
-/** Homepage block: the three fullest reviews, plus both links out. */
+/** Homepage block: three substantial reviews, plus both links out. */
 export function Reviews() {
   const ref = useReveal<HTMLDivElement>();
+  // The three that actually say something, without being an essay.
   const featured = [...reviews]
-    .sort((a, b) => b.text.length - a.text.length)
+    .filter((review) => review.text.length > 90 && review.text.length < 360)
     .slice(0, 3);
 
   return (
@@ -77,7 +90,7 @@ export function Reviews() {
         <ul className="mt-8 grid gap-4 md:grid-cols-3">
           {featured.map((review) => (
             <li key={review.author + review.date} data-reveal-child className="reveal">
-              <ReviewCard review={review} />
+              <ReviewCard review={review} clamp={5} />
             </li>
           ))}
         </ul>

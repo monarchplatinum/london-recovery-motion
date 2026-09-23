@@ -57,9 +57,9 @@ function Page() {
           </a>
         </div>
 
-        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-8 columns-1 gap-4 sm:columns-2 lg:columns-3">
           {reviews.map((review) => (
-            <li key={review.author + review.date}>
+            <li key={review.author + review.date} className="mb-4 break-inside-avoid">
               <ReviewCard review={review} />
             </li>
           ))}
