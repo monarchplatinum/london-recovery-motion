@@ -116,7 +116,11 @@ function Page() {
         <section>
           <h2>How we recover different vehicles</h2>
           <p>
-            Most jobs are a straightforward non-runner collection. The bed tilts and slides
+            Most jobs are a straightforward{" "}
+            <Link to="/non-runner-collection-london" className="text-primary hover:underline">
+              non-runner collection
+            </Link>
+            . The bed tilts and slides
             down to road level, the winch pulls the vehicle up, and it is strapped by the
             wheels rather than the bodywork so nothing is pulled out of shape. Seized
             engines, locked steering, long-term SORN cars and vehicles with no keys all
@@ -133,13 +137,24 @@ function Page() {
             waiting on a second callout.
           </p>
           <p>
-            Motorcycle recovery uses a front wheel chock and soft straps, so a bike is held
-            upright without anything being clamped to the frame or the bars. Electric and
-            hybrid vehicles go on the bed with all four wheels off the ground, which is the
-            only safe way to move them, because towing an EV on its driven wheels can
-            damage the motors. Underground and multi-storey car parks are their own
-            problem: a full-size recovery truck will not clear the ramp, so the vehicle has
-            to be brought up to street level and loaded there.
+            <Link to="/motorcycle-recovery-london" className="text-primary hover:underline">
+              Motorcycle recovery
+            </Link>{" "}
+            uses a front wheel chock and soft straps, so a bike is held upright without
+            anything being clamped to the frame or the bars.{" "}
+            <Link to="/ev-hybrid-recovery-london" className="text-primary hover:underline">
+              Electric and hybrid vehicles
+            </Link>{" "}
+            go on the bed with all four wheels off the ground, which is the only safe way to
+            move them, because towing an EV on its driven wheels can damage the motors.{" "}
+            <Link
+              to="/underground-car-park-recovery-london"
+              className="text-primary hover:underline"
+            >
+              Underground and multi-storey car parks
+            </Link>{" "}
+            are their own problem: a full-size recovery truck will not clear the ramp, so the
+            vehicle has to be brought up to street level and loaded there.
           </p>
           <p>
             Where a vehicle has been damaged in a collision, see{" "}

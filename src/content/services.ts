@@ -56,31 +56,36 @@ export const serviceGroups: ServiceGroup[] = [
         name: "Non-runner collection",
         blurb:
           "Seized engines, flat batteries, locked steering, long-term SORN cars and vehicles with no keys, winched onto the bed.",
-        to: "/vehicle-recovery-london",
+        to: "/non-runner-collection-london",
+        hasOwnPage: true,
       },
       {
         name: "Jump start and roadside assistance",
         blurb:
           "We try to get you moving at the roadside. If it cannot be fixed there, the same truck recovers it.",
-        to: "/breakdown-recovery-london",
+        to: "/jump-start-roadside-assistance-london",
+        hasOwnPage: true,
       },
       {
         name: "Motorcycle recovery",
         blurb:
           "Bikes and scooters loaded with a front wheel chock and soft straps so nothing is scratched or bent.",
-        to: "/vehicle-recovery-london",
+        to: "/motorcycle-recovery-london",
+        hasOwnPage: true,
       },
       {
         name: "EV and hybrid recovery",
         blurb:
           "Electric and hybrid vehicles carried with all four wheels off the ground, which is the safe way to move them.",
-        to: "/vehicle-recovery-london",
+        to: "/ev-hybrid-recovery-london",
+        hasOwnPage: true,
       },
       {
         name: "Underground car park recovery",
         blurb:
           "Vehicles brought up from underground and multi-storey car parks where a full-size truck cannot reach.",
-        to: "/vehicle-recovery-london",
+        to: "/underground-car-park-recovery-london",
+        hasOwnPage: true,
       },
     ],
   },
@@ -107,13 +112,15 @@ export const serviceGroups: ServiceGroup[] = [
         name: "Garage and bodyshop transfers",
         blurb:
           "Moves between garages, bodyshops, MOT stations and dealerships, including part-stripped and mid-repair vehicles.",
-        to: "/vehicle-transport-london",
+        to: "/garage-bodyshop-transfers-london",
+        hasOwnPage: true,
       },
       {
         name: "Auction vehicle collection",
         blurb:
           "Collections from BCA, Copart, Manheim and Aston Barclay delivered to your home, garage or forecourt.",
-        to: "/vehicle-transport-london",
+        to: "/auction-vehicle-collection-london",
+        hasOwnPage: true,
       },
       {
         name: "Dealer and trade transport",

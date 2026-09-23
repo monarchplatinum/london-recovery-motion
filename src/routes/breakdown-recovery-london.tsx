@@ -153,8 +153,15 @@ function Page() {
           <h2>Roadside first, recovery if not</h2>
           <p>
             Not every breakdown needs a truck. Where the fault is something we can deal with
-            where you are — a jump start being the common one — we will try that first, and
-            you may be driving away rather than waiting on a flatbed.
+            where you are —{" "}
+            <Link
+              to="/jump-start-roadside-assistance-london"
+              className="text-primary hover:underline"
+            >
+              a jump start
+            </Link>{" "}
+            being the common one — we will try that first, and you may be driving away
+            rather than waiting on a flatbed.
           </p>
           <p>
             When it cannot be fixed at the roadside, the same truck recovers the vehicle, so

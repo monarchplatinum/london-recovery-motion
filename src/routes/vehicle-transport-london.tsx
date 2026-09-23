@@ -121,8 +121,15 @@ function Page() {
             travelling on a bed.
           </p>
           <p>
-            We collect from BCA, Copart, Manheim and Aston Barclay among others. Send the
-            site, the lot or release reference, and the deadline, and we will work to it.
+            We{" "}
+            <Link
+              to="/auction-vehicle-collection-london"
+              className="text-primary hover:underline"
+            >
+              collect from BCA, Copart, Manheim and Aston Barclay
+            </Link>{" "}
+            among others. Send the site, the lot or release reference, and the deadline, and
+            we will work to it.
             Dealers and traders can arrange stock movements, part-exchange collections and
             deliveries to their own customers the same way, including several moves in one
             day.
@@ -133,8 +140,15 @@ function Page() {
           <h2>Garage, bodyshop and specialist movements</h2>
           <p>
             Plenty of independent garages and specialists have no recovery vehicle of their
-            own, so it falls to the customer to arrange collection. Give us both addresses
-            and the garage&rsquo;s opening times and we can plan around them.
+            own, so it falls to the customer to arrange collection. We handle{" "}
+            <Link
+              to="/garage-bodyshop-transfers-london"
+              className="text-primary hover:underline"
+            >
+              garage and bodyshop transfers
+            </Link>{" "}
+            across London — give us both addresses and the garage&rsquo;s opening times and
+            we can plan around them.
           </p>
           <p>
             Mid-repair and part-stripped vehicles are fine — a car with no bumper, no wheels
