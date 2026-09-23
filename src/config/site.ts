@@ -60,7 +60,7 @@ export const siteConfig = {
 
   // --- Site --------------------------------------------------------------
   /** Production domain. Update if a custom domain is connected. */
-  url: "https://mpgrecovery.com",
+  url: "https://www.mpgrecovery.com",
 
   areaServed: "London",
 } as const;
