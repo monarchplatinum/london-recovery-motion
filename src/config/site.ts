@@ -55,7 +55,7 @@ export const siteConfig = {
   analytics: {
     GA4_MEASUREMENT_ID: "",
     GTM_CONTAINER_ID: "",
-    GOOGLE_SITE_VERIFICATION: "",
+    GOOGLE_SITE_VERIFICATION: "YnTnMFzcEqG5mDrl-1PJStZKZumHS-5vHoK3DxUD5WE",
   },
 
   // --- Site --------------------------------------------------------------
