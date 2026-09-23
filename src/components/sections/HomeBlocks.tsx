@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle, MapPinned, CarFront, ClipboardList } from "lucide-react";
-import transportImg from "@/assets/transport.jpg";
-import londonRoadImg from "@/assets/london-road.jpg";
+import transportImg from "@/assets/mpg-loaded-bed.jpg";
+import archImg from "@/assets/mpg-arch-e1.jpg";
 import { WhatsAppCta } from "@/components/cta/Cta";
 import { waMessages } from "@/config/site";
 import { useReveal } from "@/hooks/use-motion";
@@ -67,9 +67,9 @@ export function TransportSection() {
         <div className="overflow-hidden rounded-2xl border border-border">
           <img
             src={transportImg}
-            alt="A car secured on the deck of a white flatbed vehicle transporter in daylight"
-            width={1408}
-            height={1008}
+            alt="A car strapped down on the deck of the MPG Recovery flatbed truck at dusk"
+            width={1242}
+            height={1170}
             loading="lazy"
             decoding="async"
             className="h-full w-full object-cover"
@@ -138,10 +138,10 @@ export function Scenarios() {
   return (
     <section className="relative overflow-hidden border-y border-border">
       <img
-        src={londonRoadImg}
-        alt="An empty London road in bright daylight"
-        width={1408}
-        height={912}
+        src={archImg}
+        alt="The MPG Recovery van inside the railway arch workshop in E1, East London"
+        width={1600}
+        height={899}
         loading="lazy"
         decoding="async"
         className="absolute inset-0 size-full object-cover opacity-25"

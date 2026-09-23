@@ -1,7 +1,7 @@
 import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-truck.jpg";
+import heroImg from "@/assets/mpg-truck-bca.jpg";
 import { HeroScene } from "@/components/hero/HeroScene";
 import { RoadDivider } from "@/components/motion/RoadDivider";
 import { WhatsAppCta, CallCta, ContextualCta } from "@/components/cta/Cta";
@@ -40,9 +40,9 @@ function Home() {
       <section className="relative isolate overflow-hidden">
         <img
           src={heroImg}
-          alt="A white flatbed recovery truck parked on a London street in daylight"
-          width={1600}
-          height={1104}
+          alt="The MPG Recovery flatbed truck at a BCA auction site, ready to collect a vehicle"
+          width={1242}
+          height={700}
           fetchPriority="high"
           decoding="async"
           className="absolute inset-0 size-full object-cover opacity-30"
