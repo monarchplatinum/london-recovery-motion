@@ -1,6 +1,31 @@
 import type { FaqItem } from "@/components/sections/Faq";
 
+/**
+ * Answers must stay within what the owner has confirmed (see CLAUDE.md).
+ * Response times are described as typical, never guaranteed, and the
+ * insurance answer says hire and reward — not "fully insured".
+ */
 export const homeFaqs: FaqItem[] = [
+  {
+    q: "How quickly can you get to me?",
+    a: "We answer the phone and WhatsApp around the clock, usually straight away. From our base in E1 we are typically with you in 5 to 15 minutes across East London, though traffic, the time of day and how far out you are all change that. Tell us where you are and we will give you a realistic time before you commit to anything.",
+  },
+  {
+    q: "Are you available at night and at weekends?",
+    a: "Yes. MPG Recovery is on call 24 hours a day, seven days a week, including nights, weekends and bank holidays.",
+  },
+  {
+    q: "Do you charge for a quote?",
+    a: "No. Quotes are free. Send the collection point, the destination and the vehicle details and we will price the job before anything is arranged.",
+  },
+  {
+    q: "Is there a callout fee?",
+    a: "Only in one situation: if we have already travelled to you and you then no longer need the vehicle moved. If we do the job, there is no separate callout charge on top of the price we agreed.",
+  },
+  {
+    q: "Are you insured to move my vehicle?",
+    a: "Yes. MPG Recovery holds business hire and reward insurance, which is the cover needed to carry customers' vehicles for payment.",
+  },
   {
     q: "Do you offer vehicle recovery in London?",
     a: "Yes. MPG Recovery is based in London and arranges vehicle recovery and transport across the capital and surrounding areas. Message us with the location and vehicle details and we can confirm availability.",

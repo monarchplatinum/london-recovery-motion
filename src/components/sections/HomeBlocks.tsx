@@ -1,31 +1,37 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, MapPinned, CarFront, ClipboardList } from "lucide-react";
+import { MessageCircle, Star, CarFront, ClipboardList } from "lucide-react";
+import { reviewSummary } from "@/content/reviews";
 import transportImg from "@/assets/gallery/mpg-recovery-car-loaded-on-bed.jpg";
 import archImg from "@/assets/mpg-arch-e1.jpg";
 import { WhatsAppCta } from "@/components/cta/Cta";
 import { waMessages } from "@/config/site";
 import { useReveal } from "@/hooks/use-motion";
 
+/**
+ * Specific, checkable claims only. The rating comes from the reviews file;
+ * hours, quotes and equipment are confirmed by the owner. Do not add
+ * licensing, accreditation or years-in-business claims here — see CLAUDE.md.
+ */
 const reasons = [
   {
     icon: MessageCircle,
-    title: "One-tap contact",
-    copy: "No call centre queue and no forms to fill in. WhatsApp us and we reply in the same thread.",
+    title: "Answered day or night",
+    copy: "We are on call 24 hours a day, every day of the year. WhatsApp or ring and you get a person, not a queue.",
   },
   {
-    icon: MapPinned,
-    title: "London roads, London base",
-    copy: "Working out of the E1 arches, with the capital's restrictions, red routes and access quirks in mind.",
-  },
-  {
-    icon: CarFront,
-    title: "Recovery and transport",
-    copy: "Whether the vehicle has stopped running or simply needs to be somewhere else, it's the same conversation.",
+    icon: Star,
+    title: `${reviewSummary.rating.toFixed(1)} from ${reviewSummary.count} Google reviews`,
+    copy: "Every review on our Google profile is five stars. Read them before you call.",
   },
   {
     icon: ClipboardList,
-    title: "Clear job details up front",
-    copy: "We confirm collection, destination and vehicle details before anything is arranged.",
+    title: "Free quotes, price agreed first",
+    copy: "Quotes cost nothing. We confirm the price before anything is arranged, so the figure doesn't move later.",
+  },
+  {
+    icon: CarFront,
+    title: "Kit that moves non-runners",
+    copy: "Tilt-and-slide bed and a winch, so a car that won't start, roll or steer still travels on the bed rather than being dragged.",
   },
 ];
 
@@ -37,7 +43,7 @@ export function WhyChoose() {
       <div ref={ref} className="reveal mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">Why MPG Recovery</p>
         <h2 className="mt-3 text-balance font-display text-[1.8rem] font-extrabold sm:text-4xl md:text-5xl">
-          Need a Recovery Truck?
+          Why People Call Us
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {reasons.map((reason) => {

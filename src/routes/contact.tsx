@@ -32,7 +32,7 @@ function Page() {
       <PageHero
         eyebrow="Contact"
         title="Contact MPG Recovery"
-        intro="WhatsApp is the fastest way to reach us — you can send photos and a location pin in the same message. Prefer to talk? Call the number below."
+        intro="We are on call 24 hours a day, seven days a week, and quotes are free. WhatsApp is the fastest way to reach us — you can send photos and a location pin in the same message. Prefer to talk? Call the number below."
         crumbs={[{ label: "Contact" }]}
       />
 

@@ -1,10 +1,18 @@
-import { MapPin, Truck, Container, MessageSquare } from "lucide-react";
+import { Clock, Star, Receipt, Truck } from "lucide-react";
+import { reviewSummary } from "@/content/reviews";
 
+/**
+ * Only claims the owner has confirmed, or that the Google profile states.
+ * Nothing about licensing, accreditation or years in business — see CLAUDE.md.
+ */
 const items = [
-  { icon: MapPin, label: "London Based" },
-  { icon: Truck, label: "Vehicle Recovery" },
-  { icon: Container, label: "Vehicle Transport" },
-  { icon: MessageSquare, label: "Direct Contact" },
+  { icon: Clock, label: "24/7, day and night" },
+  {
+    icon: Star,
+    label: `${reviewSummary.rating.toFixed(1)} from ${reviewSummary.count} Google reviews`,
+  },
+  { icon: Receipt, label: "Free quotes" },
+  { icon: Truck, label: "Tilt-and-slide and winch" },
 ];
 
 export function TrustStrip({ compact = false }: { compact?: boolean }) {

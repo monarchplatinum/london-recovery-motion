@@ -18,7 +18,7 @@ export function ContactSection({ id = "contact" }: { id?: string }) {
             </h2>
             <p className="mt-4 max-w-xl text-[1.02rem] sm:text-lg text-muted-foreground">
               Send us your location and vehicle details on WhatsApp or call MPG Recovery
-              directly.
+              directly. We are on call 24 hours a day, every day, and quotes are free.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -36,6 +36,7 @@ export function ContactSection({ id = "contact" }: { id?: string }) {
               <CopyField label="Phone" value={siteConfig.phoneDisplay} />
               <CopyField label="WhatsApp" value={siteConfig.whatsappDisplay} />
               <CopyField label="Location" value="London" copyValue="London, UK" />
+              <CopyField label="Hours" value="24/7" copyValue="Open 24 hours, 7 days" />
               {siteConfig.email ? (
                 <CopyField label="Email" value={siteConfig.email} />
               ) : null}
