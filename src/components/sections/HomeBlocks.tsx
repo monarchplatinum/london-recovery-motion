@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle, MapPinned, CarFront, ClipboardList } from "lucide-react";
-import transportImg from "@/assets/mpg-loaded-bed.jpg";
+import transportImg from "@/assets/gallery/mpg-recovery-car-loaded-on-bed.jpg";
 import archImg from "@/assets/mpg-arch-e1.jpg";
 import { WhatsAppCta } from "@/components/cta/Cta";
 import { waMessages } from "@/config/site";

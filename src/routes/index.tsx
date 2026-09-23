@@ -1,7 +1,7 @@
 import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import heroImg from "@/assets/mpg-truck-bca.jpg";
+import heroImg from "@/assets/gallery/mpg-recovery-truck-bca-auction.jpg";
 import { HeroScene } from "@/components/hero/HeroScene";
 import { RoadDivider } from "@/components/motion/RoadDivider";
 import { WhatsAppCta, CallCta, ContextualCta } from "@/components/cta/Cta";
@@ -10,6 +10,7 @@ import { Services } from "@/components/sections/Services";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Coverage } from "@/components/sections/Coverage";
 import { WhyChoose, TransportSection, Scenarios } from "@/components/sections/HomeBlocks";
+import { GalleryStrip } from "@/components/sections/GalleryStrip";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FaqList, faqSchema } from "@/components/sections/Faq";
 import { homeFaqs } from "@/content/faqs";
@@ -120,6 +121,7 @@ function Home() {
       <WhyChoose />
       <TransportSection />
       <Scenarios />
+      <GalleryStrip />
 
       <section id="faq" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">FAQ</p>

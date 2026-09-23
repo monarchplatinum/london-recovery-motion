@@ -18,6 +18,7 @@ const entries: SitemapEntry[] = [
   { path: "/accident-recovery-london", changefreq: "monthly", priority: "0.9" },
   { path: "/vehicle-transport-london", changefreq: "monthly", priority: "0.9" },
   { path: "/areas-we-cover", changefreq: "monthly", priority: "0.7" },
+  { path: "/gallery", changefreq: "monthly", priority: "0.5" },
   { path: "/vehicle-recovery-east-london", changefreq: "monthly", priority: "0.7" },
   { path: "/vehicle-recovery-central-london", changefreq: "monthly", priority: "0.7" },
   { path: "/vehicle-recovery-north-london", changefreq: "monthly", priority: "0.7" },
