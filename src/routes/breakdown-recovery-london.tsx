@@ -10,7 +10,7 @@ import { serviceSchema } from "@/lib/schema";
 import { waMessages } from "@/config/site";
 
 const path = "/breakdown-recovery-london";
-const title = "Breakdown Recovery London | Broken Down Car Collection | MPG Recovery";
+const title = "Breakdown Recovery London | 24/7 Callout | MPG Recovery";
 const description =
   "Broken down in London? MPG Recovery collects non-running vehicles and moves them where they need to be. WhatsApp your location or call 07884 889128.";
 

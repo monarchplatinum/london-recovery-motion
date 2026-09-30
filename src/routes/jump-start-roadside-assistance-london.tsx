@@ -12,7 +12,7 @@ import { waMessages } from "@/config/site";
 const path = "/jump-start-roadside-assistance-london";
 const title = "Jump Start & Roadside Assistance London | MPG Recovery";
 const description =
-  "Jump start and roadside assistance across London, 24 hours a day. If we cannot get you going at the roadside, the same truck recovers the vehicle. Call 07884 889128.";
+  "Jump starts and roadside assistance across London, 24/7. If it can't be fixed at the roadside, the same truck recovers the vehicle. Call 07884 889128.";
 
 const faqs: FaqItem[] = [
   {

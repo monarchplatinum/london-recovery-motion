@@ -11,7 +11,7 @@ import { waMessages } from "@/config/site";
 const path = "/ev-hybrid-recovery-london";
 const title = "EV & Hybrid Recovery London | MPG Recovery";
 const description =
-  "Electric and hybrid vehicle recovery in London. EVs carried with all four wheels off the ground, which is the safe way to move them. Flat traction batteries and charging faults.";
+  "EV and hybrid recovery in London. Electric cars carried with all four wheels off the ground, the safe way to move them. Flat batteries and charging faults.";
 
 const faqs: FaqItem[] = [
   {

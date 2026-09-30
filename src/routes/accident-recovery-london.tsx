@@ -10,9 +10,9 @@ import { serviceSchema } from "@/lib/schema";
 import { waMessages } from "@/config/site";
 
 const path = "/accident-recovery-london";
-const title = "Accident Vehicle Recovery London | Damaged Car Removal | MPG Recovery";
+const title = "Accident Recovery London | Damaged Cars | MPG Recovery";
 const description =
-  "Accident vehicle recovery in London. If your vehicle needs moving after an accident, contact MPG Recovery with the location and vehicle details. Call 07884 889128.";
+  "Accident recovery in London, 24/7. Damaged and undriveable vehicles winched on and taken to a garage, bodyshop or storage. Call MPG Recovery on 07884 889128.";
 
 const faqs: FaqItem[] = [
   {

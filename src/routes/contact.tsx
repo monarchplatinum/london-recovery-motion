@@ -7,7 +7,7 @@ import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { localBusinessSchema } from "@/lib/schema";
 
 const path = "/contact";
-const title = "Contact MPG Recovery | WhatsApp or Call 07884 889128 | London";
+const title = "Contact MPG Recovery | Call or WhatsApp 07884 889128";
 const description =
   "Contact MPG Recovery for vehicle recovery and transport in London. Message on WhatsApp or call 07884 889128 with your location and vehicle details.";
 

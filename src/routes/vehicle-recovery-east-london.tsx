@@ -5,7 +5,7 @@ import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
 
 const path = "/vehicle-recovery-east-london";
-const title = 'Vehicle Recovery East London | Car Recovery E1 & Docklands | MPG Recovery';
+const title = 'Vehicle Recovery East London | Car Recovery E1 & Docklands';
 const description = 'Vehicle recovery in East London from our E1 base. Tower Hamlets, Hackney, Stratford, Newham and the Docklands. WhatsApp or call 07884 889128.';
 
 export const Route = createFileRoute("/vehicle-recovery-east-london")({

@@ -10,7 +10,7 @@ import { serviceSchema } from "@/lib/schema";
 import { waMessages } from "@/config/site";
 
 const path = "/vehicle-recovery-london";
-const title = "Vehicle Recovery London | Car Recovery & Towing | MPG Recovery";
+const title = "Vehicle Recovery London | Car Recovery | MPG Recovery";
 const description =
   "Vehicle recovery in London from MPG Recovery. Non-runners, breakdowns and vehicle relocation moved on a recovery truck. WhatsApp or call 07884 889128.";
 

@@ -5,7 +5,7 @@ import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
 
 const path = "/vehicle-recovery-central-london";
-const title = 'Vehicle Recovery Central London | City & Westminster | MPG Recovery';
+const title = 'Vehicle Recovery Central London | City & Westminster';
 const description = 'Vehicle recovery in Central London. Congestion Charge zone, red routes and underground car parks planned around. WhatsApp or call 07884 889128.';
 
 export const Route = createFileRoute("/vehicle-recovery-central-london")({

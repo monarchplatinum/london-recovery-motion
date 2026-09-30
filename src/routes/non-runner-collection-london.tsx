@@ -12,7 +12,7 @@ import { waMessages } from "@/config/site";
 const path = "/non-runner-collection-london";
 const title = "Non-Runner Collection London | MPG Recovery";
 const description =
-  "Non-runner collection across London. Seized engines, flat batteries, locked steering, SORN cars and vehicles with no keys, winched onto the bed. Call 07884 889128.";
+  "Non-runner collection across London. Seized engines, flat batteries, locked steering, SORN cars and no keys, all winched onto the bed. Call 07884 889128.";
 
 const faqs: FaqItem[] = [
   {

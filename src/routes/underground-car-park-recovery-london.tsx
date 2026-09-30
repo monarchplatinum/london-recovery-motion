@@ -12,7 +12,7 @@ import { waMessages } from "@/config/site";
 const path = "/underground-car-park-recovery-london";
 const title = "Underground Car Park Recovery London | MPG Recovery";
 const description =
-  "Vehicle recovery from underground and multi-storey car parks in London, where a full-size truck cannot clear the ramp. Low clearance access, dead vehicles and no keys.";
+  "Recovery from underground and multi-storey car parks in London, where a full-size truck can't clear the ramp. Low clearance, dead vehicles and no keys.";
 
 const faqs: FaqItem[] = [
   {

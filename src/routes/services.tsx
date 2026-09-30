@@ -11,7 +11,7 @@ import { siteConfig, absoluteUrl, waMessages } from "@/config/site";
 const path = "/services";
 const title = "Vehicle Recovery & Transport Services London | MPG Recovery";
 const description =
-  "Every service MPG Recovery offers in London: breakdown and accident recovery, non-runners, motorcycles, EVs, underground car parks, auction collection and UK transport.";
+  "All MPG Recovery services in London: breakdown and accident recovery, non-runners, motorcycles, EVs, car parks, auction collection and UK transport.";
 
 function serviceListSchema() {
   return {

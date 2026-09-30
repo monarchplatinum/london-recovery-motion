@@ -6,7 +6,7 @@ import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { absoluteUrl, coveredPlaces, waMessages } from "@/config/site";
 
 const path = "/areas-we-cover";
-const title = "Areas We Cover | Vehicle Recovery Across London | MPG Recovery";
+const title = "Areas We Cover | London Vehicle Recovery | MPG Recovery";
 const description =
   "The London areas MPG Recovery covers for vehicle recovery and transport, from our E1 base across East, Central, North, South and West London.";
 

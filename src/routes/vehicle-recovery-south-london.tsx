@@ -5,7 +5,7 @@ import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
 
 const path = "/vehicle-recovery-south-london";
-const title = 'Vehicle Recovery South London | Greenwich, Lewisham & Croydon | MPG Recovery';
+const title = 'Vehicle Recovery South London | Greenwich, Lewisham, Croydon';
 const description = 'Vehicle recovery south of the river covering Greenwich, Lewisham, Southwark, Woolwich and Croydon. WhatsApp or call 07884 889128.';
 
 export const Route = createFileRoute("/vehicle-recovery-south-london")({

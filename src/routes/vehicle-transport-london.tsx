@@ -11,7 +11,7 @@ import { serviceSchema } from "@/lib/schema";
 import { waMessages } from "@/config/site";
 
 const path = "/vehicle-transport-london";
-const title = "Vehicle Transport London | Car Transport & Delivery | MPG Recovery";
+const title = "Vehicle Transport London | Car Delivery | MPG Recovery";
 const description =
   "Vehicle transport in London. Car collection and delivery for purchases, garages, dealers and auctions. Get a transport quote on WhatsApp or call 07884 889128.";
 

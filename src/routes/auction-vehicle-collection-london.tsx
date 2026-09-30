@@ -12,7 +12,7 @@ import { waMessages } from "@/config/site";
 const path = "/auction-vehicle-collection-london";
 const title = "Auction Vehicle Collection London | MPG Recovery";
 const description =
-  "Auction vehicle collection and delivery from BCA, Copart, Manheim and Aston Barclay to anywhere in London or the UK. Non-runners and untaxed vehicles carried on the bed.";
+  "Auction collection from BCA, Copart, Manheim and Aston Barclay, delivered anywhere in London or the UK. Non-runners and untaxed cars carried on the bed.";
 
 const faqs: FaqItem[] = [
   {

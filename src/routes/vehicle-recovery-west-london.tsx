@@ -5,7 +5,7 @@ import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
 
 const path = "/vehicle-recovery-west-london";
-const title = 'Vehicle Recovery West London | Kensington, Ealing & Hounslow | MPG Recovery';
+const title = 'Vehicle Recovery West London | Kensington, Ealing & Hounslow';
 const description = 'Vehicle recovery in West London covering Westminster, Kensington, Hammersmith, Ealing, Chiswick and Hounslow. WhatsApp or call 07884 889128.';
 
 export const Route = createFileRoute("/vehicle-recovery-west-london")({

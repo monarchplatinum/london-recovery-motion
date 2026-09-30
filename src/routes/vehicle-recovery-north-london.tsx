@@ -5,7 +5,7 @@ import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
 
 const path = "/vehicle-recovery-north-london";
-const title = 'Vehicle Recovery North London | Islington, Camden & Haringey | MPG Recovery';
+const title = 'Vehicle Recovery North London | Islington, Camden & Haringey';
 const description = 'Vehicle recovery in North London covering Islington, Camden, Haringey, Enfield and Barnet. WhatsApp your location or call 07884 889128.';
 
 export const Route = createFileRoute("/vehicle-recovery-north-london")({
