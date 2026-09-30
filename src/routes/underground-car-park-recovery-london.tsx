@@ -1,7 +1,8 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/arch-interior-wide.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
-import pageImg from "@/assets/jobs/mpg-recovery-night-collection-car-park.jpg";
+import pageImg from "@/assets/jobs/mpg-recovery-night-collection-car-park.webp";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -57,6 +58,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "Vehicles inside the MPG Recovery arch beside the recovery truck" }}
         eyebrow="Car park recovery"
         title="Underground Car Park Recovery in London"
         intro="A recovery truck cannot follow you down a ramp with a two metre height bar. We bring the vehicle up to street level and load it there."

@@ -1,7 +1,8 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/gallery/mpg-recovery-truck-bca-auction.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
-import pageImg from "@/assets/jobs/mpg-recovery-auction-collection-copart.jpg";
+import pageImg from "@/assets/jobs/mpg-recovery-auction-collection-copart.webp";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -57,6 +58,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "The MPG Recovery flatbed at a BCA vehicle auction site" }}
         eyebrow="Auction collection"
         title="Auction Vehicle Collection and Delivery"
         intro="Bought at BCA, Copart, Manheim or Aston Barclay? We collect within the auction's window and deliver to your home, garage or forecourt. The vehicle does not need to be driveable."

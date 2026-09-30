@@ -1,7 +1,8 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/arch-street-wide.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
-import accidentImg from "@/assets/jobs/mpg-recovery-accident-damaged-car-night.jpg";
+import accidentImg from "@/assets/jobs/mpg-recovery-accident-damaged-car-night.webp";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -66,6 +67,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "Tent Street in London E1, where MPG Recovery works from the railway arches" }}
         eyebrow="Accident recovery"
         title="Accident Vehicle Recovery in London"
         intro="If your vehicle needs moving following an accident, contact MPG Recovery with the location and vehicle details to discuss recovery."

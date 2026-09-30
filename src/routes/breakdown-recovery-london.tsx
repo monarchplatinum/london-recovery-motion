@@ -1,10 +1,12 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/hero-arch-wide.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
-import nightImg from "@/assets/jobs/mpg-recovery-night-collection-car-park.jpg";
+import nightImg from "@/assets/jobs/mpg-recovery-night-collection-car-park.webp";
 import { WhatsAppCta, CallCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
 import { waMessages } from "@/config/site";
@@ -66,6 +68,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "The MPG Recovery van ready in the railway arch on Tent Street, E1" }}
         eyebrow="Breakdown recovery"
         title="Breakdown Recovery in London"
         intro="Vehicle stopped and won't restart? Message MPG Recovery with your location and we'll talk through collecting it and where it needs to go."
@@ -251,6 +254,14 @@ function Page() {
             .
           </p>
         </section>
+
+        <RelatedServices
+          heading="Related recovery services"
+          routes={[
+            "/jump-start-roadside-assistance-london",
+            "/non-runner-collection-london",
+          ]}
+        />
 
         <section>
           <h2>Breakdown recovery FAQs</h2>

@@ -1,22 +1,22 @@
-import truckBca from "@/assets/gallery/mpg-recovery-truck-bca-auction.jpg";
-import carLoaded from "@/assets/gallery/mpg-recovery-car-loaded-on-bed.jpg";
-import suvStrapped from "@/assets/gallery/mpg-recovery-suv-strapped-down.jpg";
-import archInterior from "@/assets/gallery/mpg-recovery-arch-interior-e1.jpg";
-import tentStreet from "@/assets/gallery/mpg-recovery-arch-90-tent-street.jpg";
-import vanDoorway from "@/assets/gallery/mpg-recovery-van-arch-doorway.jpg";
-import vanOutside from "@/assets/gallery/mpg-recovery-van-outside-arch-90.jpg";
-import vanInside from "@/assets/gallery/mpg-recovery-van-inside-the-arch.jpg";
+import truckBca from "@/assets/gallery/mpg-recovery-truck-bca-auction.webp";
+import carLoaded from "@/assets/gallery/mpg-recovery-car-loaded-on-bed.webp";
+import suvStrapped from "@/assets/gallery/mpg-recovery-suv-strapped-down.webp";
+import archInterior from "@/assets/gallery/mpg-recovery-arch-interior-e1.webp";
+import tentStreet from "@/assets/gallery/mpg-recovery-arch-90-tent-street.webp";
+import vanDoorway from "@/assets/gallery/mpg-recovery-van-arch-doorway.webp";
+import vanOutside from "@/assets/gallery/mpg-recovery-van-outside-arch-90.webp";
+import vanInside from "@/assets/gallery/mpg-recovery-van-inside-the-arch.webp";
 
-import accidentNight from "@/assets/jobs/mpg-recovery-accident-damaged-car-night.jpg";
-import damagedMercedes from "@/assets/jobs/mpg-recovery-damaged-mercedes-loading.jpg";
-import nightCarPark from "@/assets/jobs/mpg-recovery-night-collection-car-park.jpg";
-import nightCanary from "@/assets/jobs/mpg-recovery-night-recovery-canary-wharf.jpg";
-import copart from "@/assets/jobs/mpg-recovery-auction-collection-copart.jpg";
-import bca from "@/assets/jobs/mpg-recovery-auction-collection-bca.jpg";
-import mini from "@/assets/jobs/mpg-recovery-mini-loaded-for-transport.jpg";
-import retailPark from "@/assets/jobs/mpg-recovery-car-loaded-retail-park.jpg";
-import bedLowered from "@/assets/jobs/mpg-recovery-tilt-and-slide-bed-lowered.jpg";
-import strapDetail from "@/assets/jobs/mpg-recovery-wheel-strap-detail.jpg";
+import accidentNight from "@/assets/jobs/mpg-recovery-accident-damaged-car-night.webp";
+import damagedMercedes from "@/assets/jobs/mpg-recovery-damaged-mercedes-loading.webp";
+import nightCarPark from "@/assets/jobs/mpg-recovery-night-collection-car-park.webp";
+import nightCanary from "@/assets/jobs/mpg-recovery-night-recovery-canary-wharf.webp";
+import copart from "@/assets/jobs/mpg-recovery-auction-collection-copart.webp";
+import bca from "@/assets/jobs/mpg-recovery-auction-collection-bca.webp";
+import mini from "@/assets/jobs/mpg-recovery-mini-loaded-for-transport.webp";
+import retailPark from "@/assets/jobs/mpg-recovery-car-loaded-retail-park.webp";
+import bedLowered from "@/assets/jobs/mpg-recovery-tilt-and-slide-bed-lowered.webp";
+import strapDetail from "@/assets/jobs/mpg-recovery-wheel-strap-detail.webp";
 
 export type GalleryImage = {
   src: string;

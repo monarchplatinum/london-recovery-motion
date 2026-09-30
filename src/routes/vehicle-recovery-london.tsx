@@ -1,10 +1,12 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/night-dusk-wide.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
-import bedImg from "@/assets/jobs/mpg-recovery-tilt-and-slide-bed-lowered.jpg";
+import bedImg from "@/assets/jobs/mpg-recovery-tilt-and-slide-bed-lowered.webp";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
 import { waMessages } from "@/config/site";
@@ -64,6 +66,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "A car strapped down on the MPG Recovery flatbed at dusk" }}
         eyebrow="Vehicle recovery"
         title="Vehicle Recovery in London"
         intro="If a vehicle needs lifting onto a recovery truck and moving somewhere else in London, that's the job. Send the location, the destination and a few details about the vehicle."
@@ -276,6 +279,17 @@ function Page() {
           label="Message us on WhatsApp"
           message={waMessages.recovery}
           event="recovery_enquiry_click"
+        />
+
+        <RelatedServices
+          heading="Our recovery services"
+          routes={[
+            "/non-runner-collection-london",
+            "/jump-start-roadside-assistance-london",
+            "/motorcycle-recovery-london",
+            "/ev-hybrid-recovery-london",
+            "/underground-car-park-recovery-london",
+          ]}
         />
 
         <section>

@@ -1,7 +1,8 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/arch-interior-wide.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
-import pageImg from "@/assets/jobs/mpg-recovery-wheel-strap-detail.jpg";
+import pageImg from "@/assets/jobs/mpg-recovery-wheel-strap-detail.webp";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -57,6 +58,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "Vehicles inside the MPG Recovery arch beside the recovery truck" }}
         eyebrow="Non-runner collection"
         title="Non-Runner Collection in London"
         intro="A car that will not start, will not roll and will not steer can still be moved. The bed lowers to the road and the winch does the rest."

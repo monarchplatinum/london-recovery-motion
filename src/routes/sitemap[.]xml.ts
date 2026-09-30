@@ -5,8 +5,13 @@ import { siteConfig } from "@/config/site";
 // Empty until the production domain is set in src/config/site.ts (siteConfig.url).
 const BASE_URL = siteConfig.url;
 
+/** Date the site's content last changed. Bump when pages are edited. */
+const SITE_UPDATED = "2026-09-30";
+
 interface SitemapEntry {
   path: string;
+  /** Overrides SITE_UPDATED for a page that changed on its own date. */
+  lastmod?: string;
   changefreq?: "daily" | "weekly" | "monthly" | "yearly";
   priority?: string;
 }
@@ -48,6 +53,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           [
             `  <url>`,
             `    <loc>${BASE_URL}${e.path}</loc>`,
+            `    <lastmod>${e.lastmod ?? SITE_UPDATED}</lastmod>`,
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,

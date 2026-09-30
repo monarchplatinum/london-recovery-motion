@@ -4,10 +4,12 @@ import { absoluteUrl } from "@/config/site";
 
 export type Crumb = { label: string; to?: string };
 
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
+export function Breadcrumbs({ items, onDark = false }: { items: Crumb[]; onDark?: boolean }) {
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
-      <ol className="flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
+      <ol
+        className={`flex flex-wrap items-center gap-1 text-xs ${onDark ? "text-white/70" : "text-muted-foreground"}`}
+      >
         <li className="flex items-center gap-1">
           <Link to="/" className="hover:text-primary">
             Home
@@ -21,7 +23,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
                 {item.label}
               </Link>
             ) : (
-              <span aria-current="page" className="text-foreground/80">
+              <span aria-current="page" className={onDark ? "text-white" : "text-foreground/80"}>
                 {item.label}
               </span>
             )}

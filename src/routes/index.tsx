@@ -1,7 +1,7 @@
 import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import heroImg from "@/assets/gallery/mpg-recovery-truck-bca-auction.jpg";
+import heroImg from "@/assets/gallery/mpg-recovery-truck-bca-auction.webp";
 import { HeroScene } from "@/components/hero/HeroScene";
 import { RoadDivider } from "@/components/motion/RoadDivider";
 import { WhatsAppCta, CallCta, ContextualCta } from "@/components/cta/Cta";
@@ -13,11 +13,12 @@ import { WhyChoose, TransportSection, Scenarios } from "@/components/sections/Ho
 import { GalleryStrip } from "@/components/sections/GalleryStrip";
 import { Reviews } from "@/components/sections/Reviews";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { Credentials } from "@/components/sections/Credentials";
 import { EnquiryForm } from "@/components/contact/EnquiryForm";
 import { FaqList, faqSchema } from "@/components/sections/Faq";
 import { homeFaqs } from "@/content/faqs";
 import { waMessages } from "@/config/site";
-import { localBusinessSchema, websiteSchema } from "@/lib/schema";
+import { localBusinessSchema, websiteSchema, serviceSchema } from "@/lib/schema";
 
 const path = "/";
 const title = "24/7 Vehicle Recovery & Towing in London | MPG Recovery";
@@ -32,6 +33,26 @@ export const Route = createFileRoute("/")({
       { type: "application/ld+json", children: JSON.stringify(localBusinessSchema()) },
       { type: "application/ld+json", children: JSON.stringify(websiteSchema()) },
       { type: "application/ld+json", children: JSON.stringify(faqSchema(homeFaqs)) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          serviceSchema(
+            "Vehicle Recovery",
+            "24 hour vehicle recovery across London: breakdowns, non-runners, accident damage, motorcycles and EVs, on a tilt-and-slide bed with a winch.",
+            "/vehicle-recovery-london",
+          ),
+        ),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          serviceSchema(
+            "Vehicle Transport",
+            "Vehicle transport across London and the UK: auction collections, garage and bodyshop transfers, private sales and long-distance moves.",
+            "/vehicle-transport-london",
+          ),
+        ),
+      },
     ],
   }),
   component: Home,
@@ -155,6 +176,8 @@ function Home() {
       <GalleryStrip />
       <RoadDivider reverse />
       <Coverage />
+
+      <Credentials />
 
       <section id="faq" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-24">
         <p className="text-eyebrow">FAQ</p>

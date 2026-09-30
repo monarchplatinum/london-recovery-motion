@@ -6,8 +6,8 @@ import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { localBusinessSchema } from "@/lib/schema";
 import { reviewSummary } from "@/content/reviews";
 import { siteConfig } from "@/config/site";
-import bedLowered from "@/assets/jobs/mpg-recovery-tilt-and-slide-bed-lowered.jpg";
-import archOutside from "@/assets/gallery/mpg-recovery-van-outside-arch-90.jpg";
+import bedLowered from "@/assets/jobs/mpg-recovery-tilt-and-slide-bed-lowered.webp";
+import archOutside from "@/assets/gallery/mpg-recovery-van-outside-arch-90.webp";
 
 const path = "/about";
 const title = "About MPG Recovery | 24/7 Vehicle Recovery in London";

@@ -1,4 +1,5 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/arch-doorway-wide.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose } from "@/components/layout/PageParts";
 import { ContextualCta } from "@/components/cta/Cta";
@@ -56,6 +57,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "The MPG Recovery van in the doorway of Arch 90, Tent Street" }}
         eyebrow="Motorcycle recovery"
         title="Motorcycle Recovery in London"
         intro="Bikes and scooters recovered and transported across London. Loaded into a front wheel chock and held with soft straps, so nothing is scratched, clamped or bent."

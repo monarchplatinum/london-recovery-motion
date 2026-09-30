@@ -1,10 +1,12 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/gallery/mpg-recovery-car-loaded-on-bed.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
-import auctionImg from "@/assets/jobs/mpg-recovery-auction-collection-bca.jpg";
+import auctionImg from "@/assets/jobs/mpg-recovery-auction-collection-bca.webp";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { RelatedServices } from "@/components/sections/RelatedServices";
 import { TransportRoute } from "@/components/sections/TransportRoute";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
@@ -67,6 +69,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "A car loaded and strapped on the MPG Recovery flatbed" }}
         eyebrow="Vehicle transport"
         title="Vehicle Transport in London"
         intro="Moving a vehicle that doesn't need to be driven — a purchase, a sale, a garage visit or a relocation. Send both postcodes and the vehicle details for a quote."
@@ -265,6 +268,14 @@ function Page() {
           label="Get a quote on WhatsApp"
           message={waMessages.transport}
           event="transport_quote_click"
+        />
+
+        <RelatedServices
+          heading="Our transport services"
+          routes={[
+            "/auction-vehicle-collection-london",
+            "/garage-bodyshop-transfers-london",
+          ]}
         />
 
         <section>

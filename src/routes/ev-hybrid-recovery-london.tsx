@@ -1,4 +1,5 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/hero-arch-wide.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose } from "@/components/layout/PageParts";
 import { ContextualCta } from "@/components/cta/Cta";
@@ -56,6 +57,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "The MPG Recovery van ready in the railway arch on Tent Street, E1" }}
         eyebrow="EV and hybrid recovery"
         title="EV and Hybrid Recovery in London"
         intro="Electric and hybrid vehicles carried with all four wheels off the ground. Towing an EV on its driven wheels can damage the motors, so it travels on the bed instead."

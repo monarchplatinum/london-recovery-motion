@@ -1,7 +1,8 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/mpg-arch-e1.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
-import pageImg from "@/assets/jobs/mpg-recovery-night-recovery-canary-wharf.jpg";
+import pageImg from "@/assets/jobs/mpg-recovery-night-recovery-canary-wharf.webp";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -57,6 +58,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "The MPG Recovery van inside the lit railway arch in E1" }}
         eyebrow="Roadside assistance"
         title="Jump Start and Roadside Assistance in London"
         intro="Flat battery or a car that will not start? We come out and try to get you moving. If it cannot be fixed where you are, the same truck takes it."

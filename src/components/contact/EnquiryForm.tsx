@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { whatsappLink } from "@/config/site";
+import { serviceGroups } from "@/content/services";
 import { trackConversion } from "@/lib/analytics";
 
 const fields = [
@@ -11,7 +12,7 @@ const fields = [
   { id: "vehicle", label: "Vehicle", type: "text", autoComplete: "off" },
 ] as const;
 
-type FieldId = (typeof fields)[number]["id"] | "message";
+type FieldId = (typeof fields)[number]["id"] | "service" | "message";
 
 /**
  * Deliberately minimal. The form composes a WhatsApp message rather than
@@ -24,6 +25,7 @@ export function EnquiryForm() {
     from: "",
     to: "",
     vehicle: "",
+    service: "",
     message: "",
   });
 
@@ -38,6 +40,7 @@ export function EnquiryForm() {
       values.phone ? `Phone: ${values.phone}` : "",
       values.from ? `Collection: ${values.from}` : "",
       values.to ? `Destination: ${values.to}` : "",
+      values.service ? `Service: ${values.service}` : "",
       values.vehicle ? `Vehicle: ${values.vehicle}` : "",
       values.message ? `Notes: ${values.message}` : "",
     ].filter(Boolean);
@@ -73,6 +76,33 @@ export function EnquiryForm() {
             />
           </div>
         ))}
+        <div className="sm:col-span-2">
+          <label
+            htmlFor="enq-service"
+            className="block text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground"
+          >
+            Service needed
+          </label>
+          <select
+            id="enq-service"
+            name="service"
+            value={values.service}
+            onChange={(e) => set("service", e.target.value)}
+            className="mt-2 min-h-11 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground"
+          >
+            <option value="">Choose a service (optional)</option>
+            {serviceGroups.map((group) => (
+              <optgroup key={group.heading} label={group.heading}>
+                {group.items.map((item) => (
+                  <option key={item.name} value={item.name}>
+                    {item.name}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+            <option value="Other / not sure">Other / not sure</option>
+          </select>
+        </div>
         <div className="sm:col-span-2">
           <label
             htmlFor="enq-message"

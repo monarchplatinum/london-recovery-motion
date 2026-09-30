@@ -1,7 +1,8 @@
 import { seoMeta, canonical, OG_IMAGES } from "@/lib/seo";
+import heroImg from "@/assets/arch-doorway-wide.webp";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Prose, InlineFigure } from "@/components/layout/PageParts";
-import pageImg from "@/assets/jobs/mpg-recovery-mini-loaded-for-transport.jpg";
+import pageImg from "@/assets/jobs/mpg-recovery-mini-loaded-for-transport.webp";
 import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -57,6 +58,7 @@ function Page() {
   return (
     <>
       <PageHero
+        image={{ src: heroImg, alt: "The MPG Recovery van in the doorway of Arch 90, Tent Street" }}
         eyebrow="Garage transfers"
         title="Garage and Bodyshop Transfers in London"
         intro="Most independent garages have no recovery vehicle of their own. We move cars between garages, bodyshops, MOT stations and dealerships, including ones that are half apart."

@@ -2,7 +2,15 @@ import type { ReactNode } from "react";
 import { Breadcrumbs, type Crumb } from "@/components/layout/Breadcrumbs";
 import { WhatsAppCta, CallCta } from "@/components/cta/Cta";
 import { waMessages } from "@/config/site";
+import { TrustStrip } from "@/components/sections/QuickAssist";
 
+export type HeroImage = { src: string; alt: string };
+
+/**
+ * Page hero. With `image`, the photograph sits behind the text under a dark
+ * scrim and the trust signals show beneath the buttons, as Caleb's service
+ * page template asks. Without it, the original light hero.
+ */
 export function PageHero({
   eyebrow,
   title,
@@ -10,6 +18,7 @@ export function PageHero({
   crumbs,
   ctaLabel = "Message us on WhatsApp",
   ctaMessage = waMessages.general,
+  image,
 }: {
   eyebrow: string;
   title: string;
@@ -17,28 +26,65 @@ export function PageHero({
   crumbs: Crumb[];
   ctaLabel?: string;
   ctaMessage?: string;
+  image?: HeroImage;
 }) {
+  if (!image) {
+    return (
+      <section className="grid-lines border-b border-border bg-surface/30">
+        <div className="mx-auto max-w-4xl px-4 pb-10 pt-6 sm:px-6 sm:pb-14 sm:pt-14">
+          <Breadcrumbs items={crumbs} />
+          <p className="text-eyebrow">{eyebrow}</p>
+          <h1 className="mt-2.5 text-balance font-display text-[2.1rem] font-extrabold leading-[0.98] sm:text-5xl md:text-6xl">
+            {title}
+          </h1>
+          <p className="mt-4 max-w-2xl text-[0.98rem] leading-relaxed text-muted-foreground sm:text-lg">
+            {intro}
+          </p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <WhatsAppCta label={ctaLabel} message={ctaMessage} size="lg" className="w-full sm:w-auto" />
+            <CallCta size="lg" className="w-full sm:w-auto" />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section className="grid-lines border-b border-border bg-surface/30">
-      <div className="mx-auto max-w-4xl px-4 pb-10 pt-6 sm:px-6 sm:pb-14 sm:pt-14">
-        <Breadcrumbs items={crumbs} />
-        <p className="text-eyebrow">{eyebrow}</p>
-        <h1 className="mt-2.5 text-balance font-display text-[2.1rem] font-extrabold leading-[0.98] sm:text-5xl md:text-6xl">
+    <section className="relative isolate overflow-hidden border-b border-border bg-neutral-950">
+      <img
+        src={image.src}
+        alt={image.alt}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 size-full object-cover"
+      />
+      <div
+        className="absolute inset-0 bg-[linear-gradient(100deg,rgba(10,8,8,0.92)_0%,rgba(10,8,8,0.8)_45%,rgba(10,8,8,0.45)_100%)]"
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto max-w-4xl px-4 pb-12 pt-6 sm:px-6 sm:pb-16 sm:pt-14">
+        <Breadcrumbs items={crumbs} onDark />
+        <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-white/70">
+          {eyebrow}
+        </p>
+        <h1 className="mt-2.5 text-balance font-display text-[2.1rem] font-extrabold leading-[0.98] text-white sm:text-5xl md:text-6xl">
           {title}
         </h1>
-        <p className="mt-4 max-w-2xl text-[0.98rem] leading-relaxed text-muted-foreground sm:text-lg">
+        <p className="mt-4 max-w-2xl text-[0.98rem] leading-relaxed text-white/80 sm:text-lg">
           {intro}
         </p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
           <WhatsAppCta label={ctaLabel} message={ctaMessage} size="lg" className="w-full sm:w-auto" />
           <CallCta size="lg" className="w-full sm:w-auto" />
         </div>
+        <div className="mt-7">
+          <TrustStrip />
+        </div>
       </div>
     </section>
   );
 }
 
-/** A single photo inside a Prose section, with its caption. */
 export function InlineFigure({
   src,
   alt,
