@@ -44,12 +44,27 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+// Every page is the same for every visitor, so Vercel's CDN may keep a copy for a
+// day and serve it straight from the edge instead of rendering it per request.
+// A new deployment clears the CDN cache, so an edit is live as soon as it deploys.
+function withEdgeCache(request: Request, response: Response): Response {
+  if (request.method !== "GET" || response.status !== 200) return response;
+  if (!(response.headers.get("content-type") ?? "").includes("text/html")) return response;
+  const headers = new Headers(response.headers);
+  headers.set("Cache-Control", "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800");
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      return withEdgeCache(request, await normalizeCatastrophicSsrResponse(response));
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
