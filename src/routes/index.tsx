@@ -90,9 +90,9 @@ function Home() {
 
 
           <div className="max-w-2xl">
-            <p className="text-eyebrow">London Vehicle Recovery &amp; Transport</p>
-            <h1 className="mt-3 text-balance font-display text-[2.25rem] font-extrabold leading-[0.95] sm:text-6xl md:text-7xl">
-              Stranded? We&rsquo;ll Get You Moving.
+            <p className="text-eyebrow">Stranded? We&rsquo;ll get you moving.</p>
+            <h1 className="mt-3 text-balance font-display text-[2.25rem] font-extrabold leading-[0.95] sm:text-5xl md:text-6xl">
+              24/7 Vehicle Recovery &amp; Towing in London
             </h1>
             <p className="mt-3 font-display text-[0.72rem] font-bold uppercase tracking-[0.16em] text-primary sm:text-sm sm:tracking-[0.28em]">
               Recovery. Transport. Delivered.
