@@ -7,7 +7,6 @@ import { ContextualCta } from "@/components/cta/Cta";
 import { FaqList, faqSchema, type FaqItem } from "@/components/sections/Faq";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { RelatedServices } from "@/components/sections/RelatedServices";
-import { TransportRoute } from "@/components/sections/TransportRoute";
 import { breadcrumbSchema } from "@/components/layout/Breadcrumbs";
 import { serviceSchema } from "@/lib/schema";
 import { waMessages } from "@/config/site";
@@ -77,8 +76,6 @@ function Page() {
         ctaLabel="Get a transport quote on WhatsApp"
         ctaMessage={waMessages.transport}
       />
-
-      <TransportRoute />
 
       <Prose>
         <section>

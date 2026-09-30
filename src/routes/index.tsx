@@ -2,7 +2,6 @@ import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/gallery/mpg-recovery-truck-bca-auction.webp";
-import { RoadDivider } from "@/components/motion/RoadDivider";
 import { WhatsAppCta, CallCta, ContextualCta } from "@/components/cta/Cta";
 import { TrustStrip, QuickAssist } from "@/components/sections/QuickAssist";
 import { Services } from "@/components/sections/Services";
@@ -140,7 +139,6 @@ function Home() {
 
       <Reviews />
 
-      <RoadDivider />
       <Services />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -168,7 +166,6 @@ function Home() {
       <HowItWorks />
       <Scenarios />
       <GalleryStrip />
-      <RoadDivider reverse />
       <Coverage />
 
       <Credentials />
