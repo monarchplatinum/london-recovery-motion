@@ -92,7 +92,7 @@ export function Footer() {
             {!siteConfig.addressIsPublicPremises ? (
               <>
                 <br />
-                <span className="text-muted-foreground/80">
+                <span className="text-muted-foreground">
                   Registered office address only — not a customer drop-in location.
                 </span>
               </>
@@ -107,7 +107,7 @@ export function Footer() {
             <li><Link to="/areas-we-cover" className="hover:text-primary">Areas We Cover</Link></li>
           </ul>
         </div>
-        <p className="mx-auto max-w-7xl px-4 pb-24 text-xs text-muted-foreground/70 sm:px-6 md:pb-8">
+        <p className="mx-auto max-w-7xl px-4 pb-24 text-xs text-muted-foreground sm:px-6 md:pb-8">
           © {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.
         </p>
       </div>

@@ -117,7 +117,7 @@ export function InlineFigure({
 export function Prose({ children }: { children: ReactNode }) {
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
-      <div className="space-y-10 text-[1.02rem] leading-relaxed text-muted-foreground [&_h2]:mt-2 [&_h2]:text-2xl [&_h2]:font-extrabold [&_h2]:text-foreground sm:[&_h2]:text-3xl [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-foreground [&_p]:mt-3 [&_li]:mt-2 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5">
+      <div className="space-y-10 text-[1.02rem] leading-relaxed text-muted-foreground [&_h2]:mt-2 [&_h2]:text-2xl [&_h2]:font-extrabold [&_h2]:text-foreground sm:[&_h2]:text-3xl [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-foreground [&_p]:mt-3 [&_li]:mt-2 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_p_a]:underline [&_p_a]:underline-offset-2">
         {children}
       </div>
     </div>

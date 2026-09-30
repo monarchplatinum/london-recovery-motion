@@ -2,7 +2,6 @@ import { seoMeta, canonical } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/gallery/mpg-recovery-truck-bca-auction.webp";
-import { HeroScene } from "@/components/hero/HeroScene";
 import { RoadDivider } from "@/components/motion/RoadDivider";
 import { WhatsAppCta, CallCta, ContextualCta } from "@/components/cta/Cta";
 import { TrustStrip, QuickAssist } from "@/components/sections/QuickAssist";
@@ -101,13 +100,8 @@ function Home() {
           className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,transparent,var(--background)_78%)]"
           aria-hidden="true"
         />
-        <HeroScene />
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-linear-to-t from-background via-background/80 to-transparent"
-          aria-hidden="true"
-        />
 
-        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-9 sm:px-6 sm:pb-44 sm:pt-24">
+        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-9 sm:px-6 sm:pb-24 sm:pt-24">
 
 
           <div className="max-w-2xl">
@@ -190,7 +184,7 @@ function Home() {
         <p className="mt-8 max-w-3xl text-sm text-muted-foreground">
 
           Still unsure?{" "}
-          <Link to="/contact" className="text-primary hover:underline">
+          <Link to="/contact" className="text-primary underline underline-offset-2">
             Contact MPG Recovery
           </Link>{" "}
           and describe the vehicle and where it needs to go.

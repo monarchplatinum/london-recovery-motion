@@ -1,6 +1,13 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "@fontsource/archivo/600.css";
+@import "@fontsource/archivo/700.css";
+@import "@fontsource/archivo/800.css";
+@import "@fontsource/archivo/900.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -87,7 +94,7 @@
   --input: oklch(0.20 0.012 350 / 0.20);
   --ring: oklch(0.335 0.132 28.4);
 
-  --whatsapp: oklch(0.62 0.16 152);
+  --whatsapp: oklch(0.52 0.14 152); /* #007f3d: white text passes AA at 5.0:1 */
   --whatsapp-foreground: oklch(0.99 0.01 152);
   --signal: oklch(0.403 0.158 28.3);
 }

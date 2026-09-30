@@ -74,7 +74,6 @@ export function CallCta({
     <a
       href={siteConfig.phoneHref}
       onClick={() => trackConversion("phone_click")}
-      aria-label={`Call MPG Recovery on ${siteConfig.phoneDisplay}`}
       className={cn(ctaVariants({ tone, size, full }), className)}
     >
       <Phone className="size-5 shrink-0" aria-hidden="true" />
