@@ -78,8 +78,9 @@ function Page() {
         <section>
           <h2>Why a truck cannot come down</h2>
           <p>
-            A flatbed recovery truck is roughly three metres tall. Underground car parks are
-            commonly barred at 2.0 or 2.1 metres, and the bar is there to protect ducting,
+            A flatbed recovery truck stands well over two metres even with nothing on the
+            bed, and taller again once a car is loaded. Underground car parks are commonly
+            barred at around two metres, and the bar is there to protect ducting,
             sprinkler pipes and the ceiling itself. Even where the height works, the ramp
             radius and the pillar spacing usually do not.
           </p>
