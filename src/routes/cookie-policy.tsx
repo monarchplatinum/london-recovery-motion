@@ -42,20 +42,34 @@ function Page() {
         <section>
           <h2>Analytics</h2>
           <p>
-            Analytics scripts are only loaded if the business has configured a measurement
-            ID. Where active, they set cookies to measure how many people visit each page
-            and which pages lead to a WhatsApp or phone tap. No analytics provider is
-            loaded while no ID is configured.
+            We use Google Analytics to count how many people visit each page, how they
+            found the site, and which pages lead to a WhatsApp message or a phone call. It
+            only sets cookies if you choose Accept in the cookie banner.
+          </p>
+          <p>
+            If you accept, Google Analytics sets two cookies: <code>_ga</code>, which
+            tells one visitor from another, and <code>_ga_7R34PXC9XX</code>, which keeps
+            track of the current visit. Both last up to two years. If you reject, or make
+            no choice, no analytics cookies are set and Google receives only anonymous,
+            cookieless signals that cannot identify you.
+          </p>
+          <p>
+            Your choice is remembered in your browser&rsquo;s local storage under
+            <code> mpg-analytics-consent</code>. You can change it at any time with the
+            &ldquo;Cookie settings&rdquo; link at the bottom of every page.
           </p>
         </section>
+
         <section>
           <h2>Third parties</h2>
           <p>
             Tapping a WhatsApp link opens WhatsApp, which is operated by Meta under its
-            own privacy and cookie policies. Fonts are loaded from Google Fonts, which
-            receives a request from your browser in order to serve them.
+            own privacy and cookie policies. Google Analytics is provided by Google under
+            its own privacy policy. Fonts are served from this website, not from a third
+            party.
           </p>
         </section>
+
         <section>
           <h2>Controlling cookies</h2>
           <p>

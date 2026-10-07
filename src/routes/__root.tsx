@@ -18,6 +18,8 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileDock } from "@/components/layout/MobileDock";
 import { siteConfig } from "@/config/site";
 import { organizationSchema } from "@/lib/schema";
+import { analyticsBootstrap } from "@/lib/consent";
+import { ConsentBanner } from "@/components/layout/ConsentBanner";
 import { useRevealObserver } from "@/hooks/use-motion";
 
 
@@ -132,6 +134,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify(organizationSchema()),
       },
+      // Google Analytics: consent is set to denied before gtag.js loads, so
+      // nothing is stored until the visitor accepts in the banner.
+      ...(siteConfig.analytics.GA4_MEASUREMENT_ID
+        ? [
+            { children: analyticsBootstrap() },
+            {
+              src: `https://www.googletagmanager.com/gtag/js?id=${siteConfig.analytics.GA4_MEASUREMENT_ID}`,
+              async: true,
+            },
+          ]
+        : []),
     ],
   }),
 
@@ -176,6 +189,7 @@ function RootComponent() {
       </main>
       <Footer />
       <MobileDock />
+      <ConsentBanner />
     </QueryClientProvider>
   );
 }

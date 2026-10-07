@@ -5,6 +5,7 @@ import { Logo } from "@/components/brand/Logo";
 import { SocialLinks } from "@/components/layout/SocialLinks";
 import { siteConfig, whatsappLink, waMessages, serviceAreas } from "@/config/site";
 import { trackConversion } from "@/lib/analytics";
+import { reopenConsent } from "@/lib/consent";
 
 export function Footer() {
   const { address } = siteConfig;
@@ -102,6 +103,11 @@ export function Footer() {
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             <li><Link to="/privacy-policy" className="hover:text-primary">Privacy Policy</Link></li>
             <li><Link to="/cookie-policy" className="hover:text-primary">Cookie Policy</Link></li>
+            <li>
+              <button type="button" onClick={reopenConsent} className="hover:text-primary">
+                Cookie settings
+              </button>
+            </li>
             <li><Link to="/terms" className="hover:text-primary">Terms</Link></li>
             <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
             <li><Link to="/areas-we-cover" className="hover:text-primary">Areas We Cover</Link></li>

@@ -54,7 +54,7 @@ export const siteConfig = {
 
   // --- Analytics (nothing loads until an ID is supplied) --------------------
   analytics: {
-    GA4_MEASUREMENT_ID: "",
+    GA4_MEASUREMENT_ID: "G-7R34PXC9XX",
     GTM_CONTAINER_ID: "",
     GOOGLE_SITE_VERIFICATION: "YnTnMFzcEqG5mDrl-1PJStZKZumHS-5vHoK3DxUD5WE",
   },
